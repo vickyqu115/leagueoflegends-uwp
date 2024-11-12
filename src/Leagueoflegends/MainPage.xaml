@@ -1,0 +1,14 @@
+﻿<Page
+    x:Class="Leagueoflegends.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Leagueoflegends"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:james="using:Jamesnet.Uwp"
+    xmlns:main="using:Leagueoflegends.Main.UI.Views">
+    <Grid Background="#000000">
+        <james:UwpLayer Grid.Row="1" LayerName="MainLayer"/>
+    </Grid>
+</Page>

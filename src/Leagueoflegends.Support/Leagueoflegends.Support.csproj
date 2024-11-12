@@ -1,0 +1,2297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3904BEA3-1AB7-41D7-B5F7-9022178403B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Leagueoflegends.Support</RootNamespace>
+    <AssemblyName>Leagueoflegends.Support</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <LangVersion>10</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Local\Converters\BooleanToInverseConverter.cs" />
+    <Compile Include="Local\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Local\Converters\BoolToPlayStopConverter.cs" />
+    <Compile Include="Local\Converters\ChampionNameToThumbnailConverter.cs" />
+    <Compile Include="Local\Converters\ConceptToImageConverter.cs" />
+    <Compile Include="Local\Converters\CooldownConverter.cs" />
+    <Compile Include="Local\Converters\DiscountRateConverter.cs" />
+    <Compile Include="Local\Converters\FromNullToValueConverter.cs" />
+    <Compile Include="Local\Converters\IconTypeToStatusIndicatorConverter.cs" />
+    <Compile Include="Local\Converters\ItemNameToImageConverter.cs" />
+    <Compile Include="Local\Converters\MatchResultToColorConverter.cs" />
+    <Compile Include="Local\Converters\MenuNameToWallpaperConverter.cs" />
+    <Compile Include="Local\Converters\NumberFormatConverter.cs" />
+    <Compile Include="Local\Converters\PercentToBadgeConverter.cs" />
+    <Compile Include="Local\Converters\ScheduleDateConverter.cs" />
+    <Compile Include="Local\Converters\ScheduleDayConverter.cs" />
+    <Compile Include="Local\Converters\SpellNameToImageConverter.cs" />
+    <Compile Include="Local\Converters\SummonerLevelConverter.cs" />
+    <Compile Include="Local\Converters\UserToThumbnailConverter.cs" />
+    <Compile Include="Local\Datas\IChampStatsDataLoader.cs" />
+    <Compile Include="Local\Datas\IFriendDataLoader.cs" />
+    <Compile Include="Local\Datas\IMatchHistoryDataLoader.cs" />
+    <Compile Include="Local\Datas\IMenuDataLoader.cs" />
+    <Compile Include="Local\Datas\IOptionDataLoader.cs" />
+    <Compile Include="Local\Datas\IPlayChampDataLoader.cs" />
+    <Compile Include="Local\Datas\IRecentDataLoader.cs" />
+    <Compile Include="Local\Datas\IScheduleDataLoader.cs" />
+    <Compile Include="Local\Datas\ISkinsDataLoader.cs" />
+    <Compile Include="Local\Datas\ISpellsDataLoader.cs" />
+    <Compile Include="Local\Datas\IStoreChampDataLoader.cs" />
+    <Compile Include="Local\Datas\ITeamFightsDataLoader.cs" />
+    <Compile Include="Local\Models\ChampionGroup.cs" />
+    <Compile Include="Local\Models\ChampionStats.cs" />
+    <Compile Include="Local\Models\Friend.cs" />
+    <Compile Include="Local\Models\FriendCategory.cs" />
+    <Compile Include="Local\Models\MatchHistory.cs" />
+    <Compile Include="Local\Models\MenuModel.cs" />
+    <Compile Include="Local\Models\Option.cs" />
+    <Compile Include="Local\Models\PlayChamp.cs" />
+    <Compile Include="Local\Models\Recent.cs" />
+    <Compile Include="Local\Models\Schedule.cs" />
+    <Compile Include="Local\Models\Skin.cs" />
+    <Compile Include="Local\Models\SkinGroup.cs" />
+    <Compile Include="Local\Models\SmallIconType.cs" />
+    <Compile Include="Local\Models\Spell.cs" />
+    <Compile Include="Local\Models\StoreChamp.cs" />
+    <Compile Include="Local\Models\TeamFight.cs" />
+    <Compile Include="Local\Services\IMenuManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Units\RiotButton.cs" />
+    <Compile Include="UI\Units\RiotCapsuleButton.cs" />
+    <Compile Include="UI\Units\RiotChampGroupItem.cs" />
+    <Compile Include="UI\Units\RiotChampionAvatar.cs" />
+    <Compile Include="UI\Units\RiotChampItemControl.cs" />
+    <Compile Include="UI\Units\RiotChampListBox.cs" />
+    <Compile Include="UI\Units\RiotChampSkinGroupItem.cs" />
+    <Compile Include="UI\Units\RiotChampSkinItemControl.cs" />
+    <Compile Include="UI\Units\RiotChampSkinListBox.cs" />
+    <Compile Include="UI\Units\RiotChampSkinSummary.cs" />
+    <Compile Include="UI\Units\RiotChampSummary.cs" />
+    <Compile Include="UI\Units\RiotCheckBox.cs" />
+    <Compile Include="UI\Units\RiotCircleButton.cs" />
+    <Compile Include="UI\Units\RiotClashEmblem.cs" />
+    <Compile Include="UI\Units\RiotClashTierButton.cs" />
+    <Compile Include="UI\Units\RiotComboBox.cs" />
+    <Compile Include="UI\Units\RiotComboBoxItem.cs" />
+    <Compile Include="UI\Units\RiotDiamondRadioButton.cs" />
+    <Compile Include="UI\Units\RiotFoldableIcon.cs" />
+    <Compile Include="UI\Units\RiotFriendGroupItem.cs" />
+    <Compile Include="UI\Units\RiotFriendItemControl.cs" />
+    <Compile Include="UI\Units\RiotFriendListBox.cs" />
+    <Compile Include="UI\Units\RiotHorizMenuListBox.cs" />
+    <Compile Include="UI\Units\RiotHorizMenuListBoxItem.cs" />
+    <Compile Include="UI\Units\RiotHorizontalProgress.cs" />
+    <Compile Include="UI\Units\RiotHubSummary.cs" />
+    <Compile Include="UI\Units\RiotIconButton.cs" />
+    <Compile Include="UI\Units\RiotItemBadge.cs" />
+    <Compile Include="UI\Units\RiotKeyButton.cs" />
+    <Compile Include="UI\Units\RiotLevelControl.cs" />
+    <Compile Include="UI\Units\RiotLevelInfoControl.cs" />
+    <Compile Include="UI\Units\RiotLinkButton.cs" />
+    <Compile Include="UI\Units\RiotMainIconMenu.cs" />
+    <Compile Include="UI\Units\RiotMainMenu.cs" />
+    <Compile Include="UI\Units\RiotMatchHistoryListBox.cs" />
+    <Compile Include="UI\Units\RiotMatchHistoryListBoxItem.cs" />
+    <Compile Include="UI\Units\RiotMuteSwitch.cs" />
+    <Compile Include="UI\Units\RiotNewsButton.cs" />
+    <Compile Include="UI\Units\RiotNoticeButton.cs" />
+    <Compile Include="UI\Units\RiotOptionMenuButton.cs" />
+    <Compile Include="UI\Units\RiotPlayButton.cs" />
+    <Compile Include="UI\Units\RiotPlayedChampListBox.cs" />
+    <Compile Include="UI\Units\RiotPlayedChampListBoxItem.cs" />
+    <Compile Include="UI\Units\RiotPositionButton.cs" />
+    <Compile Include="UI\Units\RiotPremiumButton.cs" />
+    <Compile Include="UI\Units\RiotQuestionButton.cs" />
+    <Compile Include="UI\Units\RiotRadioButton.cs" />
+    <Compile Include="UI\Units\RiotRecentListBox.cs" />
+    <Compile Include="UI\Units\RiotRecentListBoxItem.cs" />
+    <Compile Include="UI\Units\RiotSaleChampion.cs" />
+    <Compile Include="UI\Units\RiotScheduleListBox.cs" />
+    <Compile Include="UI\Units\RiotScheduleListBoxItem.cs" />
+    <Compile Include="UI\Units\RiotScrollViewer.cs" />
+    <Compile Include="UI\Units\RiotSkinTierButton.cs" />
+    <Compile Include="UI\Units\RIotSlider.cs" />
+    <Compile Include="UI\Units\RiotSpellBadge.cs" />
+    <Compile Include="UI\Units\RiotSpellListBox.cs" />
+    <Compile Include="UI\Units\RiotSpellListBoxItem.cs" />
+    <Compile Include="UI\Units\RiotStageListBox.cs" />
+    <Compile Include="UI\Units\RiotStageListBoxItem.cs" />
+    <Compile Include="UI\Units\RiotStarButton.cs" />
+    <Compile Include="UI\Units\RiotStatusIndicator.cs" />
+    <Compile Include="UI\Units\RiotStoreChampListBox.cs" />
+    <Compile Include="UI\Units\RiotStoreChampListBoxItem.cs" />
+    <Compile Include="UI\Units\RiotStoreChampSummary.cs" />
+    <Compile Include="UI\Units\RiotSwitchButton.cs" />
+    <Compile Include="UI\Units\RiotTabMenu.cs" />
+    <Compile Include="UI\Units\RiotTabMenuItem.cs" />
+    <Compile Include="UI\Units\RiotTextBox.cs" />
+    <Compile Include="UI\Units\RiotTextBoxCloseButton.cs" />
+    <Compile Include="UI\Units\RiotTicketAddButton.cs" />
+    <Compile Include="UI\Units\RiotTicketButton.cs" />
+    <Compile Include="UI\Units\RiotUserAvatar.cs" />
+    <Compile Include="UI\Units\RiotUserDisplayStatus.cs" />
+    <Compile Include="UI\Units\RiotVerticalProgress.cs" />
+    <Compile Include="UI\Units\RiotWallpaper.cs" />
+    <Compile Include="UI\Units\RIotWindowControlButton.cs" />
+    <Compile Include="UI\Units\VerticalMainMenuSeparator.cs" />
+    <EmbeddedResource Include="Properties\Leagueoflegends.Support.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotCapsuleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampGroupItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampionAvatar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampItemControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampSkinGroupItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampSkinItemControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampSkinLIstBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampSkinSummary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotChampSummary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotCheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotCircleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotClashEmblem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotClashTierButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotDiamondRadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotFoldableIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotFriendGroupItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotFriendItemControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotFriendListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotHorizMenuListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotHorizMenuListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotHorizontalProgress.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotHubSummary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotIconButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotItemBadge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotKeyButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotLevelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotLevelInfoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotLinkButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotMainIconMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotMainMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotMatchHistoryListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotMatchHistoryListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotMuteSwitch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotNewsButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotNoticeButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotOptionMenuButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotPlayButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotPlayedChampListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotPlayedChampListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotPositionButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotPremiumButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RIotQuestionButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotRadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotRecentListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotRecentListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotSaleChampion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RIotScheduleListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotScrollViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotSkinTierButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RIotSpellBadge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotSpellListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotSpellListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotStageListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotStageListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotStarButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotStatusIndicator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotStoreChampListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotStoreChampListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotStoreChampSummary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotSwitchButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotTabMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotTabMenuItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotTextBoxCloseButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotTftNewsButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotTicketAddButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotTicketButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotUserAvatar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RIotUserDisplayStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotVerticalProgress.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotWallpaper.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\RiotWindowControlButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\VerticalMainMenuSeparator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\badge_champion1.png" />
+    <Content Include="Images\badge_champion2.png" />
+    <Content Include="Images\blue-essence.png" />
+    <Content Include="Images\clash.jpg" />
+    <Content Include="Images\Concepts\assassin.png" />
+    <Content Include="Images\Concepts\dealer.png" />
+    <Content Include="Images\Concepts\support.png" />
+    <Content Include="Images\Concepts\tanker.png" />
+    <Content Include="Images\Concepts\warrior.png" />
+    <Content Include="Images\Concepts\wizard.png" />
+    <Content Include="Images\Items\berserkersgreaves.png" />
+    <Content Include="Images\Items\cloak.png" />
+    <Content Include="Images\Items\dominik.png" />
+    <Content Include="Images\Items\doranring.png" />
+    <Content Include="Images\Items\galeforce.png" />
+    <Content Include="Images\Items\infinityedge.png" />
+    <Content Include="Images\Items\ionianshoes.png" />
+    <Content Include="Images\Items\mortalreminder.png" />
+    <Content Include="Images\Items\oraclelens.png" />
+    <Content Include="Images\Items\platedshoes.png" />
+    <Content Include="Images\Items\potion.png" />
+    <Content Include="Images\Items\potion2.png" />
+    <Content Include="Images\Items\quicksilver.png" />
+    <Content Include="Images\Items\rabadon.png" />
+    <Content Include="Images\Items\rocketbelt.png" />
+    <Content Include="Images\Items\shoes.png" />
+    <Content Include="Images\Items\shurelya.png" />
+    <Content Include="Images\Items\solari.png" />
+    <Content Include="Images\Items\targon.png" />
+    <Content Include="Images\Items\thecollector.png" />
+    <Content Include="Images\Items\trinityforce.png" />
+    <Content Include="Images\Items\voidstaff.png" />
+    <Content Include="Images\Items\ward.png" />
+    <Content Include="Images\Items\warmog.png" />
+    <Content Include="Images\Items\zhonya.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\menu-selection.png" />
+    <Content Include="Images\Pieces\blue-essence.png" />
+    <Content Include="Images\Pieces\rp.png" />
+    <Content Include="Images\Pieces\star-piece.png" />
+    <Content Include="Images\Portraits\portrait_aatrox.jpg" />
+    <Content Include="Images\Portraits\portrait_ahri.jpg" />
+    <Content Include="Images\Portraits\portrait_akali.jpg" />
+    <Content Include="Images\Portraits\portrait_akshan.jpg" />
+    <Content Include="Images\Portraits\portrait_alistar.jpg" />
+    <Content Include="Images\Portraits\portrait_amumu.jpg" />
+    <Content Include="Images\Portraits\portrait_anivia.jpg" />
+    <Content Include="Images\Portraits\portrait_annie.jpg" />
+    <Content Include="Images\Portraits\portrait_aphelios.jpg" />
+    <Content Include="Images\Portraits\portrait_ashe.jpg" />
+    <Content Include="Images\Portraits\portrait_aurelionsol.jpg" />
+    <Content Include="Images\Portraits\portrait_azir.jpg" />
+    <Content Include="Images\Portraits\portrait_bard.jpg" />
+    <Content Include="Images\Portraits\portrait_blitzcrank.jpg" />
+    <Content Include="Images\Portraits\portrait_brand.jpg" />
+    <Content Include="Images\Portraits\portrait_braum.jpg" />
+    <Content Include="Images\Portraits\portrait_caitlyn.jpg" />
+    <Content Include="Images\Portraits\portrait_camille.jpg" />
+    <Content Include="Images\Portraits\portrait_cassiopeia.jpg" />
+    <Content Include="Images\Portraits\portrait_chogath.jpg" />
+    <Content Include="Images\Portraits\portrait_corki.jpg" />
+    <Content Include="Images\Portraits\portrait_darius.jpg" />
+    <Content Include="Images\Portraits\portrait_diana.jpg" />
+    <Content Include="Images\Portraits\portrait_draven.jpg" />
+    <Content Include="Images\Portraits\portrait_drmundo.jpg" />
+    <Content Include="Images\Portraits\portrait_ekko.jpg" />
+    <Content Include="Images\Portraits\portrait_elise.jpg" />
+    <Content Include="Images\Portraits\portrait_evelynn.jpg" />
+    <Content Include="Images\Portraits\portrait_ezreal.jpg" />
+    <Content Include="Images\Portraits\portrait_fiddlesticks.jpg" />
+    <Content Include="Images\Portraits\portrait_fiora.jpg" />
+    <Content Include="Images\Portraits\portrait_fizz.jpg" />
+    <Content Include="Images\Portraits\portrait_galio.jpg" />
+    <Content Include="Images\Portraits\portrait_gangplank.jpg" />
+    <Content Include="Images\Portraits\portrait_garen.jpg" />
+    <Content Include="Images\Portraits\portrait_gnar.jpg" />
+    <Content Include="Images\Portraits\portrait_gragas.jpg" />
+    <Content Include="Images\Portraits\portrait_graves.jpg" />
+    <Content Include="Images\Portraits\portrait_gwen.jpg" />
+    <Content Include="Images\Portraits\portrait_hecarim.jpg" />
+    <Content Include="Images\Portraits\portrait_heimerdinger.jpg" />
+    <Content Include="Images\Portraits\portrait_illaoi.jpg" />
+    <Content Include="Images\Portraits\portrait_insignia.png" />
+    <Content Include="Images\Portraits\portrait_irelia.jpg" />
+    <Content Include="Images\Portraits\portrait_ivern.jpg" />
+    <Content Include="Images\Portraits\portrait_janna.jpg" />
+    <Content Include="Images\Portraits\portrait_jarvaniv.jpg" />
+    <Content Include="Images\Portraits\portrait_jax.jpg" />
+    <Content Include="Images\Portraits\portrait_jayce.jpg" />
+    <Content Include="Images\Portraits\portrait_jhin.jpg" />
+    <Content Include="Images\Portraits\portrait_jinx.jpg" />
+    <Content Include="Images\Portraits\portrait_kaisa.jpg" />
+    <Content Include="Images\Portraits\portrait_kalista.jpg" />
+    <Content Include="Images\Portraits\portrait_karma.jpg" />
+    <Content Include="Images\Portraits\portrait_karthus.jpg" />
+    <Content Include="Images\Portraits\portrait_kassadin.jpg" />
+    <Content Include="Images\Portraits\portrait_katarina.jpg" />
+    <Content Include="Images\Portraits\portrait_kayle.jpg" />
+    <Content Include="Images\Portraits\portrait_kayn.jpg" />
+    <Content Include="Images\Portraits\portrait_kennen.jpg" />
+    <Content Include="Images\Portraits\portrait_khazix.jpg" />
+    <Content Include="Images\Portraits\portrait_kindred.jpg" />
+    <Content Include="Images\Portraits\portrait_kled.jpg" />
+    <Content Include="Images\Portraits\portrait_kogmaw.jpg" />
+    <Content Include="Images\Portraits\portrait_leblanc.jpg" />
+    <Content Include="Images\Portraits\portrait_leesin.jpg" />
+    <Content Include="Images\Portraits\portrait_leona.jpg" />
+    <Content Include="Images\Portraits\portrait_lillia.jpg" />
+    <Content Include="Images\Portraits\portrait_lissandra.jpg" />
+    <Content Include="Images\Portraits\portrait_lucian.jpg" />
+    <Content Include="Images\Portraits\portrait_lulu.jpg" />
+    <Content Include="Images\Portraits\portrait_lux.jpg" />
+    <Content Include="Images\Portraits\portrait_malphite.jpg" />
+    <Content Include="Images\Portraits\portrait_malzahar.jpg" />
+    <Content Include="Images\Portraits\portrait_maokai.jpg" />
+    <Content Include="Images\Portraits\portrait_masteryi.jpg" />
+    <Content Include="Images\Portraits\portrait_missfortune.jpg" />
+    <Content Include="Images\Portraits\portrait_mordekaiser.jpg" />
+    <Content Include="Images\Portraits\portrait_morgana.jpg" />
+    <Content Include="Images\Portraits\portrait_nami.jpg" />
+    <Content Include="Images\Portraits\portrait_nasus.jpg" />
+    <Content Include="Images\Portraits\portrait_nautilus.jpg" />
+    <Content Include="Images\Portraits\portrait_neeko.jpg" />
+    <Content Include="Images\Portraits\portrait_nidalee.jpg" />
+    <Content Include="Images\Portraits\portrait_nocturne.jpg" />
+    <Content Include="Images\Portraits\portrait_nunuwillump.jpg" />
+    <Content Include="Images\Portraits\portrait_olaf.jpg" />
+    <Content Include="Images\Portraits\portrait_orianna.jpg" />
+    <Content Include="Images\Portraits\portrait_ornn.jpg" />
+    <Content Include="Images\Portraits\portrait_pantheon.jpg" />
+    <Content Include="Images\Portraits\portrait_poppy.jpg" />
+    <Content Include="Images\Portraits\portrait_pyke.jpg" />
+    <Content Include="Images\Portraits\portrait_qiyana.jpg" />
+    <Content Include="Images\Portraits\portrait_quinn.jpg" />
+    <Content Include="Images\Portraits\portrait_rakan.jpg" />
+    <Content Include="Images\Portraits\portrait_rammus.jpg" />
+    <Content Include="Images\Portraits\portrait_reksai.jpg" />
+    <Content Include="Images\Portraits\portrait_rell.jpg" />
+    <Content Include="Images\Portraits\portrait_renekton.jpg" />
+    <Content Include="Images\Portraits\portrait_rengar.jpg" />
+    <Content Include="Images\Portraits\portrait_riven.jpg" />
+    <Content Include="Images\Portraits\portrait_rumble.jpg" />
+    <Content Include="Images\Portraits\portrait_ryze.jpg" />
+    <Content Include="Images\Portraits\portrait_samira.jpg" />
+    <Content Include="Images\Portraits\portrait_sejuani.jpg" />
+    <Content Include="Images\Portraits\portrait_senna.jpg" />
+    <Content Include="Images\Portraits\portrait_seraphine.jpg" />
+    <Content Include="Images\Portraits\portrait_sett.jpg" />
+    <Content Include="Images\Portraits\portrait_shaco.jpg" />
+    <Content Include="Images\Portraits\portrait_shen.jpg" />
+    <Content Include="Images\Portraits\portrait_shyvana.jpg" />
+    <Content Include="Images\Portraits\portrait_singed.jpg" />
+    <Content Include="Images\Portraits\portrait_sion.jpg" />
+    <Content Include="Images\Portraits\portrait_sivir.jpg" />
+    <Content Include="Images\Portraits\portrait_skarner.jpg" />
+    <Content Include="Images\Portraits\portrait_sona.jpg" />
+    <Content Include="Images\Portraits\portrait_soraka.jpg" />
+    <Content Include="Images\Portraits\portrait_swain.jpg" />
+    <Content Include="Images\Portraits\portrait_sylas.jpg" />
+    <Content Include="Images\Portraits\portrait_syndra.jpg" />
+    <Content Include="Images\Portraits\portrait_tahmkench.jpg" />
+    <Content Include="Images\Portraits\portrait_taliyah.jpg" />
+    <Content Include="Images\Portraits\portrait_talon.jpg" />
+    <Content Include="Images\Portraits\portrait_taric.jpg" />
+    <Content Include="Images\Portraits\portrait_teemo.jpg" />
+    <Content Include="Images\Portraits\portrait_thresh.jpg" />
+    <Content Include="Images\Portraits\portrait_tristana.jpg" />
+    <Content Include="Images\Portraits\portrait_trundle.jpg" />
+    <Content Include="Images\Portraits\portrait_tryndamere.jpg" />
+    <Content Include="Images\Portraits\portrait_twistedfate.jpg" />
+    <Content Include="Images\Portraits\portrait_twitch.jpg" />
+    <Content Include="Images\Portraits\portrait_udyr.jpg" />
+    <Content Include="Images\Portraits\portrait_urgot.jpg" />
+    <Content Include="Images\Portraits\portrait_varus.jpg" />
+    <Content Include="Images\Portraits\portrait_vayne.jpg" />
+    <Content Include="Images\Portraits\portrait_veigar.jpg" />
+    <Content Include="Images\Portraits\portrait_velkoz.jpg" />
+    <Content Include="Images\Portraits\portrait_vi.jpg" />
+    <Content Include="Images\Portraits\portrait_viego.jpg" />
+    <Content Include="Images\Portraits\portrait_viktor.jpg" />
+    <Content Include="Images\Portraits\portrait_vladimir.jpg" />
+    <Content Include="Images\Portraits\portrait_volibear.jpg" />
+    <Content Include="Images\Portraits\portrait_warwick.jpg" />
+    <Content Include="Images\Portraits\portrait_wukong.jpg" />
+    <Content Include="Images\Portraits\portrait_xayah.jpg" />
+    <Content Include="Images\Portraits\portrait_xerath.jpg" />
+    <Content Include="Images\Portraits\portrait_xinzhao.jpg" />
+    <Content Include="Images\Portraits\portrait_yasuo.jpg" />
+    <Content Include="Images\Portraits\portrait_yone.jpg" />
+    <Content Include="Images\Portraits\portrait_yorick.jpg" />
+    <Content Include="Images\Portraits\portrait_yuumi.jpg" />
+    <Content Include="Images\Portraits\portrait_zac.jpg" />
+    <Content Include="Images\Portraits\portrait_zed.jpg" />
+    <Content Include="Images\Portraits\portrait_ziggs.jpg" />
+    <Content Include="Images\Portraits\portrait_zilean.jpg" />
+    <Content Include="Images\Portraits\portrait_zoe.jpg" />
+    <Content Include="Images\Portraits\portrait_zyra.jpg" />
+    <Content Include="Images\Positions\bottom.png" />
+    <Content Include="Images\Positions\jungle.png" />
+    <Content Include="Images\Positions\mid.png" />
+    <Content Include="Images\Positions\support.png" />
+    <Content Include="Images\Positions\top.png" />
+    <Content Include="Images\profile-default.png" />
+    <Content Include="Images\rp.png" />
+    <Content Include="Images\Skins\skin_aatrox_01.jpg" />
+    <Content Include="Images\Skins\skin_aatrox_02.jpg" />
+    <Content Include="Images\Skins\skin_aatrox_03.jpg" />
+    <Content Include="Images\Skins\skin_aatrox_07.jpg" />
+    <Content Include="Images\Skins\skin_aatrox_08.jpg" />
+    <Content Include="Images\Skins\skin_aatrox_09.jpg" />
+    <Content Include="Images\Skins\skin_aatrox_11.jpg" />
+    <Content Include="Images\Skins\skin_ahri_01.jpg" />
+    <Content Include="Images\Skins\skin_ahri_02.jpg" />
+    <Content Include="Images\Skins\skin_ahri_03.jpg" />
+    <Content Include="Images\Skins\skin_ahri_04.jpg" />
+    <Content Include="Images\Skins\skin_ahri_05.jpg" />
+    <Content Include="Images\Skins\skin_ahri_06.jpg" />
+    <Content Include="Images\Skins\skin_ahri_07.jpg" />
+    <Content Include="Images\Skins\skin_ahri_14.jpg" />
+    <Content Include="Images\Skins\skin_ahri_15.jpg" />
+    <Content Include="Images\Skins\skin_ahri_16.jpg" />
+    <Content Include="Images\Skins\skin_ahri_17.jpg" />
+    <Content Include="Images\Skins\skin_ahri_27.jpg" />
+    <Content Include="Images\Skins\skin_ahri_28.jpg" />
+    <Content Include="Images\Skins\skin_ahri_42.jpg" />
+    <Content Include="Images\Skins\skin_akali_01.jpg" />
+    <Content Include="Images\Skins\skin_akali_02.jpg" />
+    <Content Include="Images\Skins\skin_akali_03.jpg" />
+    <Content Include="Images\Skins\skin_akali_04.jpg" />
+    <Content Include="Images\Skins\skin_akali_05.jpg" />
+    <Content Include="Images\Skins\skin_akali_06.jpg" />
+    <Content Include="Images\Skins\skin_akali_07.jpg" />
+    <Content Include="Images\Skins\skin_akali_08.jpg" />
+    <Content Include="Images\Skins\skin_akali_09.jpg" />
+    <Content Include="Images\Skins\skin_akali_13.jpg" />
+    <Content Include="Images\Skins\skin_akali_14.jpg" />
+    <Content Include="Images\Skins\skin_akali_15.jpg" />
+    <Content Include="Images\Skins\skin_akali_32.jpg" />
+    <Content Include="Images\Skins\skin_akali_50.jpg" />
+    <Content Include="Images\Skins\skin_akshan_01.jpg" />
+    <Content Include="Images\Skins\skin_alistar_01.jpg" />
+    <Content Include="Images\Skins\skin_alistar_02.jpg" />
+    <Content Include="Images\Skins\skin_alistar_03.jpg" />
+    <Content Include="Images\Skins\skin_alistar_04.jpg" />
+    <Content Include="Images\Skins\skin_alistar_05.jpg" />
+    <Content Include="Images\Skins\skin_alistar_06.jpg" />
+    <Content Include="Images\Skins\skin_alistar_07.jpg" />
+    <Content Include="Images\Skins\skin_alistar_08.jpg" />
+    <Content Include="Images\Skins\skin_alistar_09.jpg" />
+    <Content Include="Images\Skins\skin_alistar_10.jpg" />
+    <Content Include="Images\Skins\skin_alistar_19.jpg" />
+    <Content Include="Images\Skins\skin_alistar_20.jpg" />
+    <Content Include="Images\Skins\skin_alistar_22.jpg" />
+    <Content Include="Images\Skins\skin_alistar_29.jpg" />
+    <Content Include="Images\Skins\skin_amumu_01.jpg" />
+    <Content Include="Images\Skins\skin_amumu_02.jpg" />
+    <Content Include="Images\Skins\skin_amumu_03.jpg" />
+    <Content Include="Images\Skins\skin_amumu_04.jpg" />
+    <Content Include="Images\Skins\skin_amumu_05.jpg" />
+    <Content Include="Images\Skins\skin_amumu_06.jpg" />
+    <Content Include="Images\Skins\skin_amumu_07.jpg" />
+    <Content Include="Images\Skins\skin_amumu_08.jpg" />
+    <Content Include="Images\Skins\skin_amumu_17.jpg" />
+    <Content Include="Images\Skins\skin_amumu_23.jpg" />
+    <Content Include="Images\Skins\skin_amumu_24.jpg" />
+    <Content Include="Images\Skins\skin_anivia_01.jpg" />
+    <Content Include="Images\Skins\skin_anivia_02.jpg" />
+    <Content Include="Images\Skins\skin_anivia_03.jpg" />
+    <Content Include="Images\Skins\skin_anivia_04.jpg" />
+    <Content Include="Images\Skins\skin_anivia_05.jpg" />
+    <Content Include="Images\Skins\skin_anivia_06.jpg" />
+    <Content Include="Images\Skins\skin_anivia_07.jpg" />
+    <Content Include="Images\Skins\skin_anivia_08.jpg" />
+    <Content Include="Images\Skins\skin_anivia_17.jpg" />
+    <Content Include="Images\Skins\skin_anivia_27.jpg" />
+    <Content Include="Images\Skins\skin_annie_01.jpg" />
+    <Content Include="Images\Skins\skin_annie_02.jpg" />
+    <Content Include="Images\Skins\skin_annie_03.jpg" />
+    <Content Include="Images\Skins\skin_annie_04.jpg" />
+    <Content Include="Images\Skins\skin_annie_05.jpg" />
+    <Content Include="Images\Skins\skin_annie_06.jpg" />
+    <Content Include="Images\Skins\skin_annie_07.jpg" />
+    <Content Include="Images\Skins\skin_annie_08.jpg" />
+    <Content Include="Images\Skins\skin_annie_09.jpg" />
+    <Content Include="Images\Skins\skin_annie_10.jpg" />
+    <Content Include="Images\Skins\skin_annie_11.jpg" />
+    <Content Include="Images\Skins\skin_annie_12.jpg" />
+    <Content Include="Images\Skins\skin_annie_13.jpg" />
+    <Content Include="Images\Skins\skin_aphelios_01.jpg" />
+    <Content Include="Images\Skins\skin_aphelios_09.jpg" />
+    <Content Include="Images\Skins\skin_ashe_01.jpg" />
+    <Content Include="Images\Skins\skin_ashe_02.jpg" />
+    <Content Include="Images\Skins\skin_ashe_03.jpg" />
+    <Content Include="Images\Skins\skin_ashe_04.jpg" />
+    <Content Include="Images\Skins\skin_ashe_05.jpg" />
+    <Content Include="Images\Skins\skin_ashe_06.jpg" />
+    <Content Include="Images\Skins\skin_ashe_07.jpg" />
+    <Content Include="Images\Skins\skin_ashe_08.jpg" />
+    <Content Include="Images\Skins\skin_ashe_09.jpg" />
+    <Content Include="Images\Skins\skin_ashe_11.jpg" />
+    <Content Include="Images\Skins\skin_ashe_17.jpg" />
+    <Content Include="Images\Skins\skin_ashe_23.jpg" />
+    <Content Include="Images\Skins\skin_ashe_32.jpg" />
+    <Content Include="Images\Skins\skin_aurelionsol_01.jpg" />
+    <Content Include="Images\Skins\skin_aurelionsol_02.jpg" />
+    <Content Include="Images\Skins\skin_aurelionsol_11.jpg" />
+    <Content Include="Images\Skins\skin_azir_01.jpg" />
+    <Content Include="Images\Skins\skin_azir_02.jpg" />
+    <Content Include="Images\Skins\skin_azir_03.jpg" />
+    <Content Include="Images\Skins\skin_azir_04.jpg" />
+    <Content Include="Images\Skins\skin_azir_05.jpg" />
+    <Content Include="Images\Skins\skin_bard_01.jpg" />
+    <Content Include="Images\Skins\skin_bard_05.jpg" />
+    <Content Include="Images\Skins\skin_bard_06.jpg" />
+    <Content Include="Images\Skins\skin_bard_08.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_01.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_02.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_03.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_04.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_05.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_06.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_07.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_11.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_20.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_21.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_22.jpg" />
+    <Content Include="Images\Skins\skin_blitzcrank_29.jpg" />
+    <Content Include="Images\Skins\skin_brand_01.jpg" />
+    <Content Include="Images\Skins\skin_brand_02.jpg" />
+    <Content Include="Images\Skins\skin_brand_03.jpg" />
+    <Content Include="Images\Skins\skin_brand_04.jpg" />
+    <Content Include="Images\Skins\skin_brand_05.jpg" />
+    <Content Include="Images\Skins\skin_brand_06.jpg" />
+    <Content Include="Images\Skins\skin_brand_07.jpg" />
+    <Content Include="Images\Skins\skin_brand_08.jpg" />
+    <Content Include="Images\Skins\skin_braum_01.jpg" />
+    <Content Include="Images\Skins\skin_braum_02.jpg" />
+    <Content Include="Images\Skins\skin_braum_03.jpg" />
+    <Content Include="Images\Skins\skin_braum_10.jpg" />
+    <Content Include="Images\Skins\skin_braum_11.jpg" />
+    <Content Include="Images\Skins\skin_braum_24.jpg" />
+    <Content Include="Images\Skins\skin_braum_33.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_01.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_02.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_03.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_04.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_05.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_06.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_10.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_11.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_13.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_19.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_20.jpg" />
+    <Content Include="Images\Skins\skin_caitlyn_22.jpg" />
+    <Content Include="Images\Skins\skin_camille_01.jpg" />
+    <Content Include="Images\Skins\skin_camille_02.jpg" />
+    <Content Include="Images\Skins\skin_camille_10.jpg" />
+    <Content Include="Images\Skins\skin_camille_11.jpg" />
+    <Content Include="Images\Skins\skin_cassiopeia_01.jpg" />
+    <Content Include="Images\Skins\skin_cassiopeia_02.jpg" />
+    <Content Include="Images\Skins\skin_cassiopeia_03.jpg" />
+    <Content Include="Images\Skins\skin_cassiopeia_04.jpg" />
+    <Content Include="Images\Skins\skin_cassiopeia_08.jpg" />
+    <Content Include="Images\Skins\skin_cassiopeia_09.jpg" />
+    <Content Include="Images\Skins\skin_cassiopeia_18.jpg" />
+    <Content Include="Images\Skins\skin_chogath_01.jpg" />
+    <Content Include="Images\Skins\skin_chogath_02.jpg" />
+    <Content Include="Images\Skins\skin_chogath_03.jpg" />
+    <Content Include="Images\Skins\skin_chogath_04.jpg" />
+    <Content Include="Images\Skins\skin_chogath_05.jpg" />
+    <Content Include="Images\Skins\skin_chogath_06.jpg" />
+    <Content Include="Images\Skins\skin_chogath_07.jpg" />
+    <Content Include="Images\Skins\skin_chogath_14.jpg" />
+    <Content Include="Images\Skins\skin_chogath_50.png" />
+    <Content Include="Images\Skins\skin_corki_01.jpg" />
+    <Content Include="Images\Skins\skin_corki_02.jpg" />
+    <Content Include="Images\Skins\skin_corki_03.jpg" />
+    <Content Include="Images\Skins\skin_corki_04.jpg" />
+    <Content Include="Images\Skins\skin_corki_05.jpg" />
+    <Content Include="Images\Skins\skin_corki_06.jpg" />
+    <Content Include="Images\Skins\skin_corki_07.jpg" />
+    <Content Include="Images\Skins\skin_corki_08.jpg" />
+    <Content Include="Images\Skins\skin_corki_18.jpg" />
+    <Content Include="Images\Skins\skin_corki_26.jpg" />
+    <Content Include="Images\Skins\skin_darius_01.jpg" />
+    <Content Include="Images\Skins\skin_darius_02.jpg" />
+    <Content Include="Images\Skins\skin_darius_03.jpg" />
+    <Content Include="Images\Skins\skin_darius_04.jpg" />
+    <Content Include="Images\Skins\skin_darius_08.jpg" />
+    <Content Include="Images\Skins\skin_darius_14.jpg" />
+    <Content Include="Images\Skins\skin_darius_15.jpg" />
+    <Content Include="Images\Skins\skin_darius_16.jpg" />
+    <Content Include="Images\Skins\skin_darius_24.jpg" />
+    <Content Include="Images\Skins\skin_darius_33.jpg" />
+    <Content Include="Images\Skins\skin_diana_01.jpg" />
+    <Content Include="Images\Skins\skin_diana_02.jpg" />
+    <Content Include="Images\Skins\skin_diana_03.jpg" />
+    <Content Include="Images\Skins\skin_diana_11.jpg" />
+    <Content Include="Images\Skins\skin_diana_12.jpg" />
+    <Content Include="Images\Skins\skin_diana_18.jpg" />
+    <Content Include="Images\Skins\skin_diana_25.jpg" />
+    <Content Include="Images\Skins\skin_diana_26.jpg" />
+    <Content Include="Images\Skins\skin_diana_27.jpg" />
+    <Content Include="Images\Skins\skin_draven_01.jpg" />
+    <Content Include="Images\Skins\skin_draven_02.jpg" />
+    <Content Include="Images\Skins\skin_draven_03.jpg" />
+    <Content Include="Images\Skins\skin_draven_04.jpg" />
+    <Content Include="Images\Skins\skin_draven_05.jpg" />
+    <Content Include="Images\Skins\skin_draven_06.jpg" />
+    <Content Include="Images\Skins\skin_draven_12.jpg" />
+    <Content Include="Images\Skins\skin_draven_13.jpg" />
+    <Content Include="Images\Skins\skin_draven_20.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_01.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_02.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_03.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_04.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_05.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_06.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_07.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_08.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_09.jpg" />
+    <Content Include="Images\Skins\skin_drmundo_10.jpg" />
+    <Content Include="Images\Skins\skin_ekko_01.jpg" />
+    <Content Include="Images\Skins\skin_ekko_02.jpg" />
+    <Content Include="Images\Skins\skin_ekko_03.jpg" />
+    <Content Include="Images\Skins\skin_ekko_11.jpg" />
+    <Content Include="Images\Skins\skin_ekko_12.jpg" />
+    <Content Include="Images\Skins\skin_ekko_19.jpg" />
+    <Content Include="Images\Skins\skin_ekko_28.jpg" />
+    <Content Include="Images\Skins\skin_elise_01.jpg" />
+    <Content Include="Images\Skins\skin_elise_02.jpg" />
+    <Content Include="Images\Skins\skin_elise_03.jpg" />
+    <Content Include="Images\Skins\skin_elise_04.jpg" />
+    <Content Include="Images\Skins\skin_elise_05.jpg" />
+    <Content Include="Images\Skins\skin_elise_06.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_01.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_02.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_03.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_04.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_05.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_06.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_07.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_08.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_15.jpg" />
+    <Content Include="Images\Skins\skin_evelynn_24.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_01.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_02.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_03.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_04.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_05.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_06.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_07.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_08.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_09.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_18.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_19.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_20.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_21.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_22.jpg" />
+    <Content Include="Images\Skins\skin_ezreal_23.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_01.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_02.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_03.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_04.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_05.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_06.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_07.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_08.jpg" />
+    <Content Include="Images\Skins\skin_fiddlesticks_09.jpg" />
+    <Content Include="Images\Skins\skin_fiora_01.jpg" />
+    <Content Include="Images\Skins\skin_fiora_02.jpg" />
+    <Content Include="Images\Skins\skin_fiora_03.jpg" />
+    <Content Include="Images\Skins\skin_fiora_04.jpg" />
+    <Content Include="Images\Skins\skin_fiora_05.jpg" />
+    <Content Include="Images\Skins\skin_fiora_22.jpg" />
+    <Content Include="Images\Skins\skin_fiora_23.jpg" />
+    <Content Include="Images\Skins\skin_fiora_31.jpg" />
+    <Content Include="Images\Skins\skin_fiora_41.jpg" />
+    <Content Include="Images\Skins\skin_fiora_50.jpg" />
+    <Content Include="Images\Skins\skin_fiora_51.jpg" />
+    <Content Include="Images\Skins\skin_fiora_60.jpg" />
+    <Content Include="Images\Skins\skin_fizz_01.jpg" />
+    <Content Include="Images\Skins\skin_fizz_02.jpg" />
+    <Content Include="Images\Skins\skin_fizz_03.jpg" />
+    <Content Include="Images\Skins\skin_fizz_04.jpg" />
+    <Content Include="Images\Skins\skin_fizz_08.jpg" />
+    <Content Include="Images\Skins\skin_fizz_09.jpg" />
+    <Content Include="Images\Skins\skin_fizz_10.jpg" />
+    <Content Include="Images\Skins\skin_fizz_14.jpg" />
+    <Content Include="Images\Skins\skin_fizz_15.jpg" />
+    <Content Include="Images\Skins\skin_fizz_16.jpg" />
+    <Content Include="Images\Skins\skin_galio_01.jpg" />
+    <Content Include="Images\Skins\skin_galio_02.jpg" />
+    <Content Include="Images\Skins\skin_galio_03.jpg" />
+    <Content Include="Images\Skins\skin_galio_04.jpg" />
+    <Content Include="Images\Skins\skin_galio_05.jpg" />
+    <Content Include="Images\Skins\skin_galio_06.jpg" />
+    <Content Include="Images\Skins\skin_galio_13.jpg" />
+    <Content Include="Images\Skins\skin_galio_19.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_01.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_02.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_03.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_04.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_05.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_06.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_07.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_08.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_14.jpg" />
+    <Content Include="Images\Skins\skin_gangplank_21.jpg" />
+    <Content Include="Images\Skins\skin_garen_01.jpg" />
+    <Content Include="Images\Skins\skin_garen_02.jpg" />
+    <Content Include="Images\Skins\skin_garen_03.jpg" />
+    <Content Include="Images\Skins\skin_garen_04.jpg" />
+    <Content Include="Images\Skins\skin_garen_05.jpg" />
+    <Content Include="Images\Skins\skin_garen_06.jpg" />
+    <Content Include="Images\Skins\skin_garen_10.jpg" />
+    <Content Include="Images\Skins\skin_garen_11.jpg" />
+    <Content Include="Images\Skins\skin_garen_13.jpg" />
+    <Content Include="Images\Skins\skin_garen_14.jpg" />
+    <Content Include="Images\Skins\skin_garen_22.jpg" />
+    <Content Include="Images\Skins\skin_garen_23.jpg" />
+    <Content Include="Images\Skins\skin_garen_24.jpg" />
+    <Content Include="Images\Skins\skin_gnar_01.jpg" />
+    <Content Include="Images\Skins\skin_gnar_02.jpg" />
+    <Content Include="Images\Skins\skin_gnar_03.jpg" />
+    <Content Include="Images\Skins\skin_gnar_04.jpg" />
+    <Content Include="Images\Skins\skin_gnar_13.jpg" />
+    <Content Include="Images\Skins\skin_gnar_14.jpg" />
+    <Content Include="Images\Skins\skin_gnar_15.jpg" />
+    <Content Include="Images\Skins\skin_gragas_01.jpg" />
+    <Content Include="Images\Skins\skin_gragas_02.jpg" />
+    <Content Include="Images\Skins\skin_gragas_03.jpg" />
+    <Content Include="Images\Skins\skin_gragas_04.jpg" />
+    <Content Include="Images\Skins\skin_gragas_05.jpg" />
+    <Content Include="Images\Skins\skin_gragas_06.jpg" />
+    <Content Include="Images\Skins\skin_gragas_07.jpg" />
+    <Content Include="Images\Skins\skin_gragas_08.jpg" />
+    <Content Include="Images\Skins\skin_gragas_09.jpg" />
+    <Content Include="Images\Skins\skin_gragas_10.jpg" />
+    <Content Include="Images\Skins\skin_gragas_11.jpg" />
+    <Content Include="Images\Skins\skin_graves_01.jpg" />
+    <Content Include="Images\Skins\skin_graves_02.jpg" />
+    <Content Include="Images\Skins\skin_graves_03.jpg" />
+    <Content Include="Images\Skins\skin_graves_04.jpg" />
+    <Content Include="Images\Skins\skin_graves_05.jpg" />
+    <Content Include="Images\Skins\skin_graves_06.jpg" />
+    <Content Include="Images\Skins\skin_graves_07.jpg" />
+    <Content Include="Images\Skins\skin_graves_14.jpg" />
+    <Content Include="Images\Skins\skin_graves_18.jpg" />
+    <Content Include="Images\Skins\skin_graves_25.jpg" />
+    <Content Include="Images\Skins\skin_graves_35.jpg" />
+    <Content Include="Images\Skins\skin_gwen_01.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_01.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_02.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_03.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_04.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_05.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_06.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_07.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_08.jpg" />
+    <Content Include="Images\Skins\skin_hecarim_14.jpg" />
+    <Content Include="Images\Skins\skin_heimerdinger_01.jpg" />
+    <Content Include="Images\Skins\skin_heimerdinger_02.jpg" />
+    <Content Include="Images\Skins\skin_heimerdinger_03.jpg" />
+    <Content Include="Images\Skins\skin_heimerdinger_04.jpg" />
+    <Content Include="Images\Skins\skin_heimerdinger_05.jpg" />
+    <Content Include="Images\Skins\skin_heimerdinger_06.jpg" />
+    <Content Include="Images\Skins\skin_heimerdinger_15.jpg" />
+    <Content Include="Images\Skins\skin_illaoi_01.jpg" />
+    <Content Include="Images\Skins\skin_illaoi_02.jpg" />
+    <Content Include="Images\Skins\skin_illaoi_10.jpg" />
+    <Content Include="Images\Skins\skin_insignia_01.png" />
+    <Content Include="Images\Skins\skin_irelia_01.jpg" />
+    <Content Include="Images\Skins\skin_irelia_02.jpg" />
+    <Content Include="Images\Skins\skin_irelia_03.jpg" />
+    <Content Include="Images\Skins\skin_irelia_04.jpg" />
+    <Content Include="Images\Skins\skin_irelia_05.jpg" />
+    <Content Include="Images\Skins\skin_irelia_06.jpg" />
+    <Content Include="Images\Skins\skin_irelia_15.jpg" />
+    <Content Include="Images\Skins\skin_irelia_16.jpg" />
+    <Content Include="Images\Skins\skin_irelia_17.jpg" />
+    <Content Include="Images\Skins\skin_irelia_18.jpg" />
+    <Content Include="Images\Skins\skin_irelia_26.jpg" />
+    <Content Include="Images\Skins\skin_ivern_01.jpg" />
+    <Content Include="Images\Skins\skin_ivern_02.jpg" />
+    <Content Include="Images\Skins\skin_ivern_11.jpg" />
+    <Content Include="Images\Skins\skin_janna_01.jpg" />
+    <Content Include="Images\Skins\skin_janna_02.jpg" />
+    <Content Include="Images\Skins\skin_janna_03.jpg" />
+    <Content Include="Images\Skins\skin_janna_04.jpg" />
+    <Content Include="Images\Skins\skin_janna_05.jpg" />
+    <Content Include="Images\Skins\skin_janna_06.jpg" />
+    <Content Include="Images\Skins\skin_janna_07.jpg" />
+    <Content Include="Images\Skins\skin_janna_08.jpg" />
+    <Content Include="Images\Skins\skin_janna_13.jpg" />
+    <Content Include="Images\Skins\skin_janna_20.jpg" />
+    <Content Include="Images\Skins\skin_janna_27.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_01.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_02.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_03.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_04.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_05.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_06.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_07.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_08.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_09.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_11.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_21.jpg" />
+    <Content Include="Images\Skins\skin_jarvaniv_30.jpg" />
+    <Content Include="Images\Skins\skin_jax_01.jpg" />
+    <Content Include="Images\Skins\skin_jax_02.jpg" />
+    <Content Include="Images\Skins\skin_jax_03.jpg" />
+    <Content Include="Images\Skins\skin_jax_04.jpg" />
+    <Content Include="Images\Skins\skin_jax_05.jpg" />
+    <Content Include="Images\Skins\skin_jax_06.jpg" />
+    <Content Include="Images\Skins\skin_jax_07.jpg" />
+    <Content Include="Images\Skins\skin_jax_08.jpg" />
+    <Content Include="Images\Skins\skin_jax_12.jpg" />
+    <Content Include="Images\Skins\skin_jax_13.jpg" />
+    <Content Include="Images\Skins\skin_jax_14.jpg" />
+    <Content Include="Images\Skins\skin_jax_20.jpg" />
+    <Content Include="Images\Skins\skin_jax_21.jpg" />
+    <Content Include="Images\Skins\skin_jayce_01.jpg" />
+    <Content Include="Images\Skins\skin_jayce_02.jpg" />
+    <Content Include="Images\Skins\skin_jayce_03.jpg" />
+    <Content Include="Images\Skins\skin_jayce_04.jpg" />
+    <Content Include="Images\Skins\skin_jayce_05.jpg" />
+    <Content Include="Images\Skins\skin_jayce_15.jpg" />
+    <Content Include="Images\Skins\skin_jhin_01.jpg" />
+    <Content Include="Images\Skins\skin_jhin_02.jpg" />
+    <Content Include="Images\Skins\skin_jhin_03.jpg" />
+    <Content Include="Images\Skins\skin_jhin_04.jpg" />
+    <Content Include="Images\Skins\skin_jhin_05.jpg" />
+    <Content Include="Images\Skins\skin_jhin_14.jpg" />
+    <Content Include="Images\Skins\skin_jhin_23.jpg" />
+    <Content Include="Images\Skins\skin_jinx_01.jpg" />
+    <Content Include="Images\Skins\skin_jinx_02.jpg" />
+    <Content Include="Images\Skins\skin_jinx_03.jpg" />
+    <Content Include="Images\Skins\skin_jinx_04.jpg" />
+    <Content Include="Images\Skins\skin_jinx_12.jpg" />
+    <Content Include="Images\Skins\skin_jinx_13.jpg" />
+    <Content Include="Images\Skins\skin_jinx_20.jpg" />
+    <Content Include="Images\Skins\skin_jinx_29.jpg" />
+    <Content Include="Images\Skins\skin_kaisa_01.jpg" />
+    <Content Include="Images\Skins\skin_kaisa_14.jpg" />
+    <Content Include="Images\Skins\skin_kaisa_15.jpg" />
+    <Content Include="Images\Skins\skin_kaisa_16.jpg" />
+    <Content Include="Images\Skins\skin_kaisa_17.jpg" />
+    <Content Include="Images\Skins\skin_kaisa_26.jpg" />
+    <Content Include="Images\Skins\skin_kaisa_27.jpg" />
+    <Content Include="Images\Skins\skin_kaisa_30.jpg" />
+    <Content Include="Images\Skins\skin_kalista_01.jpg" />
+    <Content Include="Images\Skins\skin_kalista_02.jpg" />
+    <Content Include="Images\Skins\skin_kalista_03.jpg" />
+    <Content Include="Images\Skins\skin_kalista_05.jpg" />
+    <Content Include="Images\Skins\skin_karma_01.jpg" />
+    <Content Include="Images\Skins\skin_karma_02.jpg" />
+    <Content Include="Images\Skins\skin_karma_03.jpg" />
+    <Content Include="Images\Skins\skin_karma_04.jpg" />
+    <Content Include="Images\Skins\skin_karma_05.jpg" />
+    <Content Include="Images\Skins\skin_karma_06.jpg" />
+    <Content Include="Images\Skins\skin_karma_07.jpg" />
+    <Content Include="Images\Skins\skin_karma_08.jpg" />
+    <Content Include="Images\Skins\skin_karma_19.jpg" />
+    <Content Include="Images\Skins\skin_karma_26.jpg" />
+    <Content Include="Images\Skins\skin_karma_27.jpg" />
+    <Content Include="Images\Skins\skin_karma_50.jpg" />
+    <Content Include="Images\Skins\skin_karthus_01.jpg" />
+    <Content Include="Images\Skins\skin_karthus_02.jpg" />
+    <Content Include="Images\Skins\skin_karthus_03.jpg" />
+    <Content Include="Images\Skins\skin_karthus_04.jpg" />
+    <Content Include="Images\Skins\skin_karthus_05.jpg" />
+    <Content Include="Images\Skins\skin_karthus_09.jpg" />
+    <Content Include="Images\Skins\skin_karthus_10.jpg" />
+    <Content Include="Images\Skins\skin_karthus_17.jpg" />
+    <Content Include="Images\Skins\skin_kassadin_01.jpg" />
+    <Content Include="Images\Skins\skin_kassadin_02.jpg" />
+    <Content Include="Images\Skins\skin_kassadin_03.jpg" />
+    <Content Include="Images\Skins\skin_kassadin_04.jpg" />
+    <Content Include="Images\Skins\skin_kassadin_05.jpg" />
+    <Content Include="Images\Skins\skin_kassadin_06.jpg" />
+    <Content Include="Images\Skins\skin_kassadin_14.jpg" />
+    <Content Include="Images\Skins\skin_katarina_01.jpg" />
+    <Content Include="Images\Skins\skin_katarina_02.jpg" />
+    <Content Include="Images\Skins\skin_katarina_03.jpg" />
+    <Content Include="Images\Skins\skin_katarina_04.jpg" />
+    <Content Include="Images\Skins\skin_katarina_05.jpg" />
+    <Content Include="Images\Skins\skin_katarina_06.jpg" />
+    <Content Include="Images\Skins\skin_katarina_07.jpg" />
+    <Content Include="Images\Skins\skin_katarina_08.jpg" />
+    <Content Include="Images\Skins\skin_katarina_09.jpg" />
+    <Content Include="Images\Skins\skin_katarina_10.jpg" />
+    <Content Include="Images\Skins\skin_katarina_12.jpg" />
+    <Content Include="Images\Skins\skin_katarina_21.jpg" />
+    <Content Include="Images\Skins\skin_katarina_29.jpg" />
+    <Content Include="Images\Skins\skin_kayle_01.jpg" />
+    <Content Include="Images\Skins\skin_kayle_02.jpg" />
+    <Content Include="Images\Skins\skin_kayle_03.jpg" />
+    <Content Include="Images\Skins\skin_kayle_04.jpg" />
+    <Content Include="Images\Skins\skin_kayle_05.jpg" />
+    <Content Include="Images\Skins\skin_kayle_06.jpg" />
+    <Content Include="Images\Skins\skin_kayle_07.jpg" />
+    <Content Include="Images\Skins\skin_kayle_08.jpg" />
+    <Content Include="Images\Skins\skin_kayle_09.jpg" />
+    <Content Include="Images\Skins\skin_kayle_15.jpg" />
+    <Content Include="Images\Skins\skin_kayle_24.jpg" />
+    <Content Include="Images\Skins\skin_kayle_33.jpg" />
+    <Content Include="Images\Skins\skin_kayn_01.jpg" />
+    <Content Include="Images\Skins\skin_kayn_02.jpg" />
+    <Content Include="Images\Skins\skin_kennen_01.jpg" />
+    <Content Include="Images\Skins\skin_kennen_02.jpg" />
+    <Content Include="Images\Skins\skin_kennen_03.jpg" />
+    <Content Include="Images\Skins\skin_kennen_04.jpg" />
+    <Content Include="Images\Skins\skin_kennen_05.jpg" />
+    <Content Include="Images\Skins\skin_kennen_06.jpg" />
+    <Content Include="Images\Skins\skin_kennen_07.jpg" />
+    <Content Include="Images\Skins\skin_kennen_08.jpg" />
+    <Content Include="Images\Skins\skin_kennen_23.jpg" />
+    <Content Include="Images\Skins\skin_khazix_01.jpg" />
+    <Content Include="Images\Skins\skin_khazix_02.jpg" />
+    <Content Include="Images\Skins\skin_khazix_03.jpg" />
+    <Content Include="Images\Skins\skin_khazix_04.jpg" />
+    <Content Include="Images\Skins\skin_khazix_11.jpg" />
+    <Content Include="Images\Skins\skin_khazix_60.jpg" />
+    <Content Include="Images\Skins\skin_kindred_01.jpg" />
+    <Content Include="Images\Skins\skin_kindred_02.jpg" />
+    <Content Include="Images\Skins\skin_kindred_03.jpg" />
+    <Content Include="Images\Skins\skin_kled_01.jpg" />
+    <Content Include="Images\Skins\skin_kled_02.jpg" />
+    <Content Include="Images\Skins\skin_kled_09.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_01.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_02.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_03.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_04.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_05.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_06.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_07.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_08.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_09.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_10.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_19.jpg" />
+    <Content Include="Images\Skins\skin_kogmaw_28.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_01.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_02.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_03.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_04.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_05.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_12.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_19.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_20.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_29.jpg" />
+    <Content Include="Images\Skins\skin_leblanc_33.jpg" />
+    <Content Include="Images\Skins\skin_leesin_01.jpg" />
+    <Content Include="Images\Skins\skin_leesin_02.jpg" />
+    <Content Include="Images\Skins\skin_leesin_03.jpg" />
+    <Content Include="Images\Skins\skin_leesin_04.jpg" />
+    <Content Include="Images\Skins\skin_leesin_05.jpg" />
+    <Content Include="Images\Skins\skin_leesin_06.jpg" />
+    <Content Include="Images\Skins\skin_leesin_10.jpg" />
+    <Content Include="Images\Skins\skin_leesin_11.jpg" />
+    <Content Include="Images\Skins\skin_leesin_12.jpg" />
+    <Content Include="Images\Skins\skin_leesin_27.jpg" />
+    <Content Include="Images\Skins\skin_leesin_28.jpg" />
+    <Content Include="Images\Skins\skin_leesin_29.jpg" />
+    <Content Include="Images\Skins\skin_leesin_31.jpg" />
+    <Content Include="Images\Skins\skin_leona_01.jpg" />
+    <Content Include="Images\Skins\skin_leona_02.jpg" />
+    <Content Include="Images\Skins\skin_leona_03.jpg" />
+    <Content Include="Images\Skins\skin_leona_04.jpg" />
+    <Content Include="Images\Skins\skin_leona_08.jpg" />
+    <Content Include="Images\Skins\skin_leona_09.jpg" />
+    <Content Include="Images\Skins\skin_leona_10.jpg" />
+    <Content Include="Images\Skins\skin_leona_11.jpg" />
+    <Content Include="Images\Skins\skin_leona_12.jpg" />
+    <Content Include="Images\Skins\skin_leona_21.jpg" />
+    <Content Include="Images\Skins\skin_leona_22.jpg" />
+    <Content Include="Images\Skins\skin_leona_23.jpg" />
+    <Content Include="Images\Skins\skin_leona_50.png" />
+    <Content Include="Images\Skins\skin_lillia_01.jpg" />
+    <Content Include="Images\Skins\skin_lillia_03.jpg" />
+    <Content Include="Images\Skins\skin_lissandra_01.jpg" />
+    <Content Include="Images\Skins\skin_lissandra_02.jpg" />
+    <Content Include="Images\Skins\skin_lissandra_03.jpg" />
+    <Content Include="Images\Skins\skin_lissandra_04.jpg" />
+    <Content Include="Images\Skins\skin_lissandra_12.jpg" />
+    <Content Include="Images\Skins\skin_lucian_01.jpg" />
+    <Content Include="Images\Skins\skin_lucian_02.jpg" />
+    <Content Include="Images\Skins\skin_lucian_06.jpg" />
+    <Content Include="Images\Skins\skin_lucian_07.jpg" />
+    <Content Include="Images\Skins\skin_lucian_08.jpg" />
+    <Content Include="Images\Skins\skin_lucian_09.jpg" />
+    <Content Include="Images\Skins\skin_lucian_18.jpg" />
+    <Content Include="Images\Skins\skin_lucian_19.jpg" />
+    <Content Include="Images\Skins\skin_lucian_25.jpg" />
+    <Content Include="Images\Skins\skin_lucian_31.jpg" />
+    <Content Include="Images\Skins\skin_lulu_01.jpg" />
+    <Content Include="Images\Skins\skin_lulu_02.jpg" />
+    <Content Include="Images\Skins\skin_lulu_03.jpg" />
+    <Content Include="Images\Skins\skin_lulu_04.jpg" />
+    <Content Include="Images\Skins\skin_lulu_05.jpg" />
+    <Content Include="Images\Skins\skin_lulu_06.jpg" />
+    <Content Include="Images\Skins\skin_lulu_14.jpg" />
+    <Content Include="Images\Skins\skin_lulu_15.jpg" />
+    <Content Include="Images\Skins\skin_lulu_26.jpg" />
+    <Content Include="Images\Skins\skin_lulu_27.jpg" />
+    <Content Include="Images\Skins\skin_lux_01.jpg" />
+    <Content Include="Images\Skins\skin_lux_02.jpg" />
+    <Content Include="Images\Skins\skin_lux_03.jpg" />
+    <Content Include="Images\Skins\skin_lux_04.jpg" />
+    <Content Include="Images\Skins\skin_lux_05.jpg" />
+    <Content Include="Images\Skins\skin_lux_06.jpg" />
+    <Content Include="Images\Skins\skin_lux_07.jpg" />
+    <Content Include="Images\Skins\skin_lux_08.jpg" />
+    <Content Include="Images\Skins\skin_lux_14.jpg" />
+    <Content Include="Images\Skins\skin_lux_15.jpg" />
+    <Content Include="Images\Skins\skin_lux_16.jpg" />
+    <Content Include="Images\Skins\skin_lux_17.jpg" />
+    <Content Include="Images\Skins\skin_lux_18.jpg" />
+    <Content Include="Images\Skins\skin_lux_19.jpg" />
+    <Content Include="Images\Skins\skin_malphite_01.jpg" />
+    <Content Include="Images\Skins\skin_malphite_02.jpg" />
+    <Content Include="Images\Skins\skin_malphite_03.jpg" />
+    <Content Include="Images\Skins\skin_malphite_04.jpg" />
+    <Content Include="Images\Skins\skin_malphite_05.jpg" />
+    <Content Include="Images\Skins\skin_malphite_06.jpg" />
+    <Content Include="Images\Skins\skin_malphite_07.jpg" />
+    <Content Include="Images\Skins\skin_malphite_16.jpg" />
+    <Content Include="Images\Skins\skin_malphite_23.jpg" />
+    <Content Include="Images\Skins\skin_malphite_24.jpg" />
+    <Content Include="Images\Skins\skin_malphite_25.jpg" />
+    <Content Include="Images\Skins\skin_malphite_27.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_01.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_02.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_03.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_04.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_05.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_06.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_07.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_09.jpg" />
+    <Content Include="Images\Skins\skin_malzahar_18.jpg" />
+    <Content Include="Images\Skins\skin_maokai_01.jpg" />
+    <Content Include="Images\Skins\skin_maokai_02.jpg" />
+    <Content Include="Images\Skins\skin_maokai_03.jpg" />
+    <Content Include="Images\Skins\skin_maokai_04.jpg" />
+    <Content Include="Images\Skins\skin_maokai_05.jpg" />
+    <Content Include="Images\Skins\skin_maokai_06.jpg" />
+    <Content Include="Images\Skins\skin_maokai_07.jpg" />
+    <Content Include="Images\Skins\skin_maokai_16.jpg" />
+    <Content Include="Images\Skins\skin_maokai_24.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_01.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_02.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_03.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_04.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_05.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_09.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_10.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_11.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_17.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_24.jpg" />
+    <Content Include="Images\Skins\skin_masteryi_33.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_01.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_02.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_03.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_04.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_05.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_06.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_07.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_08.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_09.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_15.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_16.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_17.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_18.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_20.jpg" />
+    <Content Include="Images\Skins\skin_missfortune_21.jpg" />
+    <Content Include="Images\Skins\skin_monkeyking_01.jpg" />
+    <Content Include="Images\Skins\skin_monkeyking_02.jpg" />
+    <Content Include="Images\Skins\skin_monkeyking_03.jpg" />
+    <Content Include="Images\Skins\skin_monkeyking_04.jpg" />
+    <Content Include="Images\Skins\skin_monkeyking_05.jpg" />
+    <Content Include="Images\Skins\skin_monkeyking_06.jpg" />
+    <Content Include="Images\Skins\skin_monkeyking_07.jpg" />
+    <Content Include="Images\Skins\skin_mordekaiser_01.jpg" />
+    <Content Include="Images\Skins\skin_mordekaiser_02.jpg" />
+    <Content Include="Images\Skins\skin_mordekaiser_03.jpg" />
+    <Content Include="Images\Skins\skin_mordekaiser_04.jpg" />
+    <Content Include="Images\Skins\skin_mordekaiser_05.jpg" />
+    <Content Include="Images\Skins\skin_mordekaiser_06.jpg" />
+    <Content Include="Images\Skins\skin_mordekaiser_13.jpg" />
+    <Content Include="Images\Skins\skin_mordekaiser_23.jpg" />
+    <Content Include="Images\Skins\skin_morgana_01.jpg" />
+    <Content Include="Images\Skins\skin_morgana_02.jpg" />
+    <Content Include="Images\Skins\skin_morgana_03.jpg" />
+    <Content Include="Images\Skins\skin_morgana_04.jpg" />
+    <Content Include="Images\Skins\skin_morgana_05.jpg" />
+    <Content Include="Images\Skins\skin_morgana_06.jpg" />
+    <Content Include="Images\Skins\skin_morgana_10.jpg" />
+    <Content Include="Images\Skins\skin_morgana_11.jpg" />
+    <Content Include="Images\Skins\skin_morgana_17.jpg" />
+    <Content Include="Images\Skins\skin_morgana_26.jpg" />
+    <Content Include="Images\Skins\skin_morgana_30.jpg" />
+    <Content Include="Images\Skins\skin_morgana_50.jpg" />
+    <Content Include="Images\Skins\skin_nami_01.jpg" />
+    <Content Include="Images\Skins\skin_nami_02.jpg" />
+    <Content Include="Images\Skins\skin_nami_03.jpg" />
+    <Content Include="Images\Skins\skin_nami_07.jpg" />
+    <Content Include="Images\Skins\skin_nami_08.jpg" />
+    <Content Include="Images\Skins\skin_nami_09.jpg" />
+    <Content Include="Images\Skins\skin_nami_15.jpg" />
+    <Content Include="Images\Skins\skin_nami_24.jpg" />
+    <Content Include="Images\Skins\skin_nami_30.jpg" />
+    <Content Include="Images\Skins\skin_nasus_01.jpg" />
+    <Content Include="Images\Skins\skin_nasus_02.jpg" />
+    <Content Include="Images\Skins\skin_nasus_03.jpg" />
+    <Content Include="Images\Skins\skin_nasus_04.jpg" />
+    <Content Include="Images\Skins\skin_nasus_05.jpg" />
+    <Content Include="Images\Skins\skin_nasus_06.jpg" />
+    <Content Include="Images\Skins\skin_nasus_10.jpg" />
+    <Content Include="Images\Skins\skin_nasus_11.jpg" />
+    <Content Include="Images\Skins\skin_nasus_16.jpg" />
+    <Content Include="Images\Skins\skin_nasus_25.jpg" />
+    <Content Include="Images\Skins\skin_nautilus_01.jpg" />
+    <Content Include="Images\Skins\skin_nautilus_02.jpg" />
+    <Content Include="Images\Skins\skin_nautilus_03.jpg" />
+    <Content Include="Images\Skins\skin_nautilus_04.jpg" />
+    <Content Include="Images\Skins\skin_nautilus_05.jpg" />
+    <Content Include="Images\Skins\skin_nautilus_06.jpg" />
+    <Content Include="Images\Skins\skin_nautilus_09.jpg" />
+    <Content Include="Images\Skins\skin_neeko_01.jpg" />
+    <Content Include="Images\Skins\skin_neeko_10.jpg" />
+    <Content Include="Images\Skins\skin_neeko_11.jpg" />
+    <Content Include="Images\Skins\skin_neeko_12.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_01.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_02.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_03.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_04.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_05.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_06.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_07.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_08.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_09.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_11.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_18.jpg" />
+    <Content Include="Images\Skins\skin_nidalee_27.jpg" />
+    <Content Include="Images\Skins\skin_nocturne_01.jpg" />
+    <Content Include="Images\Skins\skin_nocturne_02.jpg" />
+    <Content Include="Images\Skins\skin_nocturne_03.jpg" />
+    <Content Include="Images\Skins\skin_nocturne_04.jpg" />
+    <Content Include="Images\Skins\skin_nocturne_05.jpg" />
+    <Content Include="Images\Skins\skin_nocturne_06.jpg" />
+    <Content Include="Images\Skins\skin_nocturne_07.jpg" />
+    <Content Include="Images\Skins\skin_nocturne_16.jpg" />
+    <Content Include="Images\Skins\skin_nunu_01.jpg" />
+    <Content Include="Images\Skins\skin_nunu_02.jpg" />
+    <Content Include="Images\Skins\skin_nunu_03.jpg" />
+    <Content Include="Images\Skins\skin_nunu_04.jpg" />
+    <Content Include="Images\Skins\skin_nunu_05.jpg" />
+    <Content Include="Images\Skins\skin_nunu_06.jpg" />
+    <Content Include="Images\Skins\skin_nunu_07.jpg" />
+    <Content Include="Images\Skins\skin_nunu_08.jpg" />
+    <Content Include="Images\Skins\skin_nunu_16.jpg" />
+    <Content Include="Images\Skins\skin_olaf_01.jpg" />
+    <Content Include="Images\Skins\skin_olaf_02.jpg" />
+    <Content Include="Images\Skins\skin_olaf_03.jpg" />
+    <Content Include="Images\Skins\skin_olaf_04.jpg" />
+    <Content Include="Images\Skins\skin_olaf_05.jpg" />
+    <Content Include="Images\Skins\skin_olaf_06.jpg" />
+    <Content Include="Images\Skins\skin_olaf_15.jpg" />
+    <Content Include="Images\Skins\skin_olaf_16.jpg" />
+    <Content Include="Images\Skins\skin_olaf_25.jpg" />
+    <Content Include="Images\Skins\skin_olaf_35.jpg" />
+    <Content Include="Images\Skins\skin_orianna_01.jpg" />
+    <Content Include="Images\Skins\skin_orianna_02.jpg" />
+    <Content Include="Images\Skins\skin_orianna_03.jpg" />
+    <Content Include="Images\Skins\skin_orianna_04.jpg" />
+    <Content Include="Images\Skins\skin_orianna_05.jpg" />
+    <Content Include="Images\Skins\skin_orianna_06.jpg" />
+    <Content Include="Images\Skins\skin_orianna_07.jpg" />
+    <Content Include="Images\Skins\skin_orianna_08.jpg" />
+    <Content Include="Images\Skins\skin_orianna_11.jpg" />
+    <Content Include="Images\Skins\skin_ornn_01.jpg" />
+    <Content Include="Images\Skins\skin_ornn_02.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_01.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_02.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_03.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_04.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_05.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_06.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_07.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_08.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_16.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_25.jpg" />
+    <Content Include="Images\Skins\skin_pantheon_26.jpg" />
+    <Content Include="Images\Skins\skin_poppy_01.jpg" />
+    <Content Include="Images\Skins\skin_poppy_02.jpg" />
+    <Content Include="Images\Skins\skin_poppy_03.jpg" />
+    <Content Include="Images\Skins\skin_poppy_04.jpg" />
+    <Content Include="Images\Skins\skin_poppy_05.jpg" />
+    <Content Include="Images\Skins\skin_poppy_06.jpg" />
+    <Content Include="Images\Skins\skin_poppy_07.jpg" />
+    <Content Include="Images\Skins\skin_poppy_14.jpg" />
+    <Content Include="Images\Skins\skin_poppy_15.jpg" />
+    <Content Include="Images\Skins\skin_poppy_16.jpg" />
+    <Content Include="Images\Skins\skin_poppy_30.jpg" />
+    <Content Include="Images\Skins\skin_pyke_01.jpg" />
+    <Content Include="Images\Skins\skin_pyke_09.jpg" />
+    <Content Include="Images\Skins\skin_pyke_16.jpg" />
+    <Content Include="Images\Skins\skin_pyke_25.jpg" />
+    <Content Include="Images\Skins\skin_pyke_34.jpg" />
+    <Content Include="Images\Skins\skin_qiyana_01.jpg" />
+    <Content Include="Images\Skins\skin_qiyana_02.jpg" />
+    <Content Include="Images\Skins\skin_qiyana_10.jpg" />
+    <Content Include="Images\Skins\skin_qiyana_11.jpg" />
+    <Content Include="Images\Skins\skin_quinn_01.jpg" />
+    <Content Include="Images\Skins\skin_quinn_02.jpg" />
+    <Content Include="Images\Skins\skin_quinn_03.jpg" />
+    <Content Include="Images\Skins\skin_quinn_04.jpg" />
+    <Content Include="Images\Skins\skin_quinn_05.jpg" />
+    <Content Include="Images\Skins\skin_rakan_01.jpg" />
+    <Content Include="Images\Skins\skin_rakan_02.jpg" />
+    <Content Include="Images\Skins\skin_rakan_03.jpg" />
+    <Content Include="Images\Skins\skin_rakan_04.jpg" />
+    <Content Include="Images\Skins\skin_rakan_05.jpg" />
+    <Content Include="Images\Skins\skin_rakan_09.jpg" />
+    <Content Include="Images\Skins\skin_rammus_01.jpg" />
+    <Content Include="Images\Skins\skin_rammus_02.jpg" />
+    <Content Include="Images\Skins\skin_rammus_03.jpg" />
+    <Content Include="Images\Skins\skin_rammus_04.jpg" />
+    <Content Include="Images\Skins\skin_rammus_05.jpg" />
+    <Content Include="Images\Skins\skin_rammus_06.jpg" />
+    <Content Include="Images\Skins\skin_rammus_07.jpg" />
+    <Content Include="Images\Skins\skin_rammus_08.jpg" />
+    <Content Include="Images\Skins\skin_rammus_16.jpg" />
+    <Content Include="Images\Skins\skin_rammus_17.jpg" />
+    <Content Include="Images\Skins\skin_reksai_01.jpg" />
+    <Content Include="Images\Skins\skin_reksai_02.jpg" />
+    <Content Include="Images\Skins\skin_reksai_09.jpg" />
+    <Content Include="Images\Skins\skin_rell_01.jpg" />
+    <Content Include="Images\Skins\skin_renekton_01.jpg" />
+    <Content Include="Images\Skins\skin_renekton_02.jpg" />
+    <Content Include="Images\Skins\skin_renekton_03.jpg" />
+    <Content Include="Images\Skins\skin_renekton_04.jpg" />
+    <Content Include="Images\Skins\skin_renekton_05.jpg" />
+    <Content Include="Images\Skins\skin_renekton_06.jpg" />
+    <Content Include="Images\Skins\skin_renekton_07.jpg" />
+    <Content Include="Images\Skins\skin_renekton_08.jpg" />
+    <Content Include="Images\Skins\skin_renekton_09.jpg" />
+    <Content Include="Images\Skins\skin_renekton_17.jpg" />
+    <Content Include="Images\Skins\skin_renekton_18.jpg" />
+    <Content Include="Images\Skins\skin_renekton_26.jpg" />
+    <Content Include="Images\Skins\skin_rengar_01.jpg" />
+    <Content Include="Images\Skins\skin_rengar_02.jpg" />
+    <Content Include="Images\Skins\skin_rengar_03.jpg" />
+    <Content Include="Images\Skins\skin_rengar_08.jpg" />
+    <Content Include="Images\Skins\skin_rengar_15.jpg" />
+    <Content Include="Images\Skins\skin_rengar_23.jpg" />
+    <Content Include="Images\Skins\skin_rengar_30.jpg" />
+    <Content Include="Images\Skins\skin_riven_01.jpg" />
+    <Content Include="Images\Skins\skin_riven_02.jpg" />
+    <Content Include="Images\Skins\skin_riven_03.jpg" />
+    <Content Include="Images\Skins\skin_riven_04.jpg" />
+    <Content Include="Images\Skins\skin_riven_05.jpg" />
+    <Content Include="Images\Skins\skin_riven_06.jpg" />
+    <Content Include="Images\Skins\skin_riven_07.jpg" />
+    <Content Include="Images\Skins\skin_riven_16.jpg" />
+    <Content Include="Images\Skins\skin_riven_18.jpg" />
+    <Content Include="Images\Skins\skin_riven_20.jpg" />
+    <Content Include="Images\Skins\skin_riven_22.jpg" />
+    <Content Include="Images\Skins\skin_riven_23.jpg" />
+    <Content Include="Images\Skins\skin_riven_34.jpg" />
+    <Content Include="Images\Skins\skin_rumble_01.jpg" />
+    <Content Include="Images\Skins\skin_rumble_02.jpg" />
+    <Content Include="Images\Skins\skin_rumble_03.jpg" />
+    <Content Include="Images\Skins\skin_rumble_04.jpg" />
+    <Content Include="Images\Skins\skin_rumble_13.jpg" />
+    <Content Include="Images\Skins\skin_ryze_01.jpg" />
+    <Content Include="Images\Skins\skin_ryze_02.jpg" />
+    <Content Include="Images\Skins\skin_ryze_03.jpg" />
+    <Content Include="Images\Skins\skin_ryze_04.jpg" />
+    <Content Include="Images\Skins\skin_ryze_05.jpg" />
+    <Content Include="Images\Skins\skin_ryze_06.jpg" />
+    <Content Include="Images\Skins\skin_ryze_07.jpg" />
+    <Content Include="Images\Skins\skin_ryze_08.jpg" />
+    <Content Include="Images\Skins\skin_ryze_09.jpg" />
+    <Content Include="Images\Skins\skin_ryze_10.jpg" />
+    <Content Include="Images\Skins\skin_ryze_11.jpg" />
+    <Content Include="Images\Skins\skin_ryze_13.jpg" />
+    <Content Include="Images\Skins\skin_samira_01.jpg" />
+    <Content Include="Images\Skins\skin_samira_10.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_01.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_02.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_03.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_04.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_05.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_06.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_07.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_08.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_15.jpg" />
+    <Content Include="Images\Skins\skin_sejuani_16.jpg" />
+    <Content Include="Images\Skins\skin_senna_01.jpg" />
+    <Content Include="Images\Skins\skin_senna_09.jpg" />
+    <Content Include="Images\Skins\skin_senna_10.jpg" />
+    <Content Include="Images\Skins\skin_senna_16.jpg" />
+    <Content Include="Images\Skins\skin_seraphine_01.jpg" />
+    <Content Include="Images\Skins\skin_seraphine_02.jpg" />
+    <Content Include="Images\Skins\skin_seraphine_03.jpg" />
+    <Content Include="Images\Skins\skin_seraphine_04.jpg" />
+    <Content Include="Images\Skins\skin_sett_01.jpg" />
+    <Content Include="Images\Skins\skin_sett_08.jpg" />
+    <Content Include="Images\Skins\skin_sett_09.jpg" />
+    <Content Include="Images\Skins\skin_sett_10.jpg" />
+    <Content Include="Images\Skins\skin_shaco_01.jpg" />
+    <Content Include="Images\Skins\skin_shaco_02.jpg" />
+    <Content Include="Images\Skins\skin_shaco_03.jpg" />
+    <Content Include="Images\Skins\skin_shaco_04.jpg" />
+    <Content Include="Images\Skins\skin_shaco_05.jpg" />
+    <Content Include="Images\Skins\skin_shaco_06.jpg" />
+    <Content Include="Images\Skins\skin_shaco_07.jpg" />
+    <Content Include="Images\Skins\skin_shaco_08.jpg" />
+    <Content Include="Images\Skins\skin_shaco_15.jpg" />
+    <Content Include="Images\Skins\skin_shaco_23.jpg" />
+    <Content Include="Images\Skins\skin_shen_01.jpg" />
+    <Content Include="Images\Skins\skin_shen_02.jpg" />
+    <Content Include="Images\Skins\skin_shen_03.jpg" />
+    <Content Include="Images\Skins\skin_shen_04.jpg" />
+    <Content Include="Images\Skins\skin_shen_05.jpg" />
+    <Content Include="Images\Skins\skin_shen_06.jpg" />
+    <Content Include="Images\Skins\skin_shen_15.jpg" />
+    <Content Include="Images\Skins\skin_shen_16.jpg" />
+    <Content Include="Images\Skins\skin_shen_22.jpg" />
+    <Content Include="Images\Skins\skin_shyvana_01.jpg" />
+    <Content Include="Images\Skins\skin_shyvana_02.jpg" />
+    <Content Include="Images\Skins\skin_shyvana_03.jpg" />
+    <Content Include="Images\Skins\skin_shyvana_04.jpg" />
+    <Content Include="Images\Skins\skin_shyvana_05.jpg" />
+    <Content Include="Images\Skins\skin_shyvana_06.jpg" />
+    <Content Include="Images\Skins\skin_shyvana_08.jpg" />
+    <Content Include="Images\Skins\skin_singed_01.jpg" />
+    <Content Include="Images\Skins\skin_singed_02.jpg" />
+    <Content Include="Images\Skins\skin_singed_03.jpg" />
+    <Content Include="Images\Skins\skin_singed_04.jpg" />
+    <Content Include="Images\Skins\skin_singed_05.jpg" />
+    <Content Include="Images\Skins\skin_singed_06.jpg" />
+    <Content Include="Images\Skins\skin_singed_07.jpg" />
+    <Content Include="Images\Skins\skin_singed_08.jpg" />
+    <Content Include="Images\Skins\skin_singed_09.jpg" />
+    <Content Include="Images\Skins\skin_singed_10.jpg" />
+    <Content Include="Images\Skins\skin_sion_01.jpg" />
+    <Content Include="Images\Skins\skin_sion_02.jpg" />
+    <Content Include="Images\Skins\skin_sion_03.jpg" />
+    <Content Include="Images\Skins\skin_sion_04.jpg" />
+    <Content Include="Images\Skins\skin_sion_05.jpg" />
+    <Content Include="Images\Skins\skin_sion_14.jpg" />
+    <Content Include="Images\Skins\skin_sion_22.jpg" />
+    <Content Include="Images\Skins\skin_sivir_01.jpg" />
+    <Content Include="Images\Skins\skin_sivir_02.jpg" />
+    <Content Include="Images\Skins\skin_sivir_03.jpg" />
+    <Content Include="Images\Skins\skin_sivir_04.jpg" />
+    <Content Include="Images\Skins\skin_sivir_05.jpg" />
+    <Content Include="Images\Skins\skin_sivir_06.jpg" />
+    <Content Include="Images\Skins\skin_sivir_07.jpg" />
+    <Content Include="Images\Skins\skin_sivir_08.jpg" />
+    <Content Include="Images\Skins\skin_sivir_09.jpg" />
+    <Content Include="Images\Skins\skin_sivir_10.jpg" />
+    <Content Include="Images\Skins\skin_sivir_16.jpg" />
+    <Content Include="Images\Skins\skin_sivir_25.jpg" />
+    <Content Include="Images\Skins\skin_skarner_01.jpg" />
+    <Content Include="Images\Skins\skin_skarner_02.jpg" />
+    <Content Include="Images\Skins\skin_skarner_03.jpg" />
+    <Content Include="Images\Skins\skin_skarner_04.jpg" />
+    <Content Include="Images\Skins\skin_skarner_05.jpg" />
+    <Content Include="Images\Skins\skin_sona_01.jpg" />
+    <Content Include="Images\Skins\skin_sona_02.jpg" />
+    <Content Include="Images\Skins\skin_sona_03.jpg" />
+    <Content Include="Images\Skins\skin_sona_04.jpg" />
+    <Content Include="Images\Skins\skin_sona_05.jpg" />
+    <Content Include="Images\Skins\skin_sona_06.jpg" />
+    <Content Include="Images\Skins\skin_sona_07.jpg" />
+    <Content Include="Images\Skins\skin_sona_09.jpg" />
+    <Content Include="Images\Skins\skin_sona_17.jpg" />
+    <Content Include="Images\Skins\skin_sona_26.jpg" />
+    <Content Include="Images\Skins\skin_soraka_01.jpg" />
+    <Content Include="Images\Skins\skin_soraka_02.jpg" />
+    <Content Include="Images\Skins\skin_soraka_03.jpg" />
+    <Content Include="Images\Skins\skin_soraka_04.jpg" />
+    <Content Include="Images\Skins\skin_soraka_05.jpg" />
+    <Content Include="Images\Skins\skin_soraka_06.jpg" />
+    <Content Include="Images\Skins\skin_soraka_07.jpg" />
+    <Content Include="Images\Skins\skin_soraka_08.jpg" />
+    <Content Include="Images\Skins\skin_soraka_09.jpg" />
+    <Content Include="Images\Skins\skin_soraka_15.jpg" />
+    <Content Include="Images\Skins\skin_soraka_16.jpg" />
+    <Content Include="Images\Skins\skin_soraka_17.jpg" />
+    <Content Include="Images\Skins\skin_swain_01.jpg" />
+    <Content Include="Images\Skins\skin_swain_02.jpg" />
+    <Content Include="Images\Skins\skin_swain_03.jpg" />
+    <Content Include="Images\Skins\skin_swain_04.jpg" />
+    <Content Include="Images\Skins\skin_swain_11.jpg" />
+    <Content Include="Images\Skins\skin_swain_12.jpg" />
+    <Content Include="Images\Skins\skin_sylas_01.jpg" />
+    <Content Include="Images\Skins\skin_sylas_08.jpg" />
+    <Content Include="Images\Skins\skin_sylas_13.jpg" />
+    <Content Include="Images\Skins\skin_sylas_14.jpg" />
+    <Content Include="Images\Skins\skin_syndra_01.jpg" />
+    <Content Include="Images\Skins\skin_syndra_02.jpg" />
+    <Content Include="Images\Skins\skin_syndra_03.jpg" />
+    <Content Include="Images\Skins\skin_syndra_04.jpg" />
+    <Content Include="Images\Skins\skin_syndra_05.jpg" />
+    <Content Include="Images\Skins\skin_syndra_06.jpg" />
+    <Content Include="Images\Skins\skin_syndra_07.jpg" />
+    <Content Include="Images\Skins\skin_syndra_16.jpg" />
+    <Content Include="Images\Skins\skin_tahmkench_01.jpg" />
+    <Content Include="Images\Skins\skin_tahmkench_02.jpg" />
+    <Content Include="Images\Skins\skin_tahmkench_03.jpg" />
+    <Content Include="Images\Skins\skin_tahmkench_11.jpg" />
+    <Content Include="Images\Skins\skin_taliyah_01.jpg" />
+    <Content Include="Images\Skins\skin_taliyah_02.jpg" />
+    <Content Include="Images\Skins\skin_taliyah_03.jpg" />
+    <Content Include="Images\Skins\skin_taliyah_04.png" />
+    <Content Include="Images\Skins\skin_talon_01.jpg" />
+    <Content Include="Images\Skins\skin_talon_02.jpg" />
+    <Content Include="Images\Skins\skin_talon_03.jpg" />
+    <Content Include="Images\Skins\skin_talon_04.jpg" />
+    <Content Include="Images\Skins\skin_talon_05.jpg" />
+    <Content Include="Images\Skins\skin_talon_12.jpg" />
+    <Content Include="Images\Skins\skin_talon_20.jpg" />
+    <Content Include="Images\Skins\skin_talon_29.jpg" />
+    <Content Include="Images\Skins\skin_taric_01.jpg" />
+    <Content Include="Images\Skins\skin_taric_02.jpg" />
+    <Content Include="Images\Skins\skin_taric_03.jpg" />
+    <Content Include="Images\Skins\skin_taric_04.jpg" />
+    <Content Include="Images\Skins\skin_taric_09.jpg" />
+    <Content Include="Images\Skins\skin_teemo_01.jpg" />
+    <Content Include="Images\Skins\skin_teemo_02.jpg" />
+    <Content Include="Images\Skins\skin_teemo_03.jpg" />
+    <Content Include="Images\Skins\skin_teemo_04.jpg" />
+    <Content Include="Images\Skins\skin_teemo_05.jpg" />
+    <Content Include="Images\Skins\skin_teemo_06.jpg" />
+    <Content Include="Images\Skins\skin_teemo_07.jpg" />
+    <Content Include="Images\Skins\skin_teemo_08.jpg" />
+    <Content Include="Images\Skins\skin_teemo_14.jpg" />
+    <Content Include="Images\Skins\skin_teemo_18.jpg" />
+    <Content Include="Images\Skins\skin_teemo_25.jpg" />
+    <Content Include="Images\Skins\skin_teemo_27.jpg" />
+    <Content Include="Images\Skins\skin_thresh_01.jpg" />
+    <Content Include="Images\Skins\skin_thresh_02.jpg" />
+    <Content Include="Images\Skins\skin_thresh_03.jpg" />
+    <Content Include="Images\Skins\skin_thresh_04.jpg" />
+    <Content Include="Images\Skins\skin_thresh_05.jpg" />
+    <Content Include="Images\Skins\skin_thresh_06.jpg" />
+    <Content Include="Images\Skins\skin_thresh_13.jpg" />
+    <Content Include="Images\Skins\skin_thresh_14.jpg" />
+    <Content Include="Images\Skins\skin_thresh_15.jpg" />
+    <Content Include="Images\Skins\skin_thresh_17.jpg" />
+    <Content Include="Images\Skins\skin_thresh_27.jpg" />
+    <Content Include="Images\Skins\skin_thresh_30.jpg" />
+    <Content Include="Images\Skins\skin_tristana_01.jpg" />
+    <Content Include="Images\Skins\skin_tristana_02.jpg" />
+    <Content Include="Images\Skins\skin_tristana_03.jpg" />
+    <Content Include="Images\Skins\skin_tristana_04.jpg" />
+    <Content Include="Images\Skins\skin_tristana_05.jpg" />
+    <Content Include="Images\Skins\skin_tristana_06.jpg" />
+    <Content Include="Images\Skins\skin_tristana_10.jpg" />
+    <Content Include="Images\Skins\skin_tristana_11.jpg" />
+    <Content Include="Images\Skins\skin_tristana_12.jpg" />
+    <Content Include="Images\Skins\skin_tristana_24.jpg" />
+    <Content Include="Images\Skins\skin_tristana_33.jpg" />
+    <Content Include="Images\Skins\skin_tristana_40.jpg" />
+    <Content Include="Images\Skins\skin_trundle_01.jpg" />
+    <Content Include="Images\Skins\skin_trundle_02.jpg" />
+    <Content Include="Images\Skins\skin_trundle_03.jpg" />
+    <Content Include="Images\Skins\skin_trundle_04.jpg" />
+    <Content Include="Images\Skins\skin_trundle_05.jpg" />
+    <Content Include="Images\Skins\skin_trundle_06.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_01.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_02.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_03.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_04.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_05.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_06.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_07.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_08.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_09.jpg" />
+    <Content Include="Images\Skins\skin_tryndamere_10.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_01.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_02.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_03.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_04.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_05.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_06.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_07.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_08.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_09.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_10.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_11.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_13.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_23.jpg" />
+    <Content Include="Images\Skins\skin_twistedfate_25.jpg" />
+    <Content Include="Images\Skins\skin_twitch_01.jpg" />
+    <Content Include="Images\Skins\skin_twitch_02.jpg" />
+    <Content Include="Images\Skins\skin_twitch_03.jpg" />
+    <Content Include="Images\Skins\skin_twitch_04.jpg" />
+    <Content Include="Images\Skins\skin_twitch_05.jpg" />
+    <Content Include="Images\Skins\skin_twitch_06.jpg" />
+    <Content Include="Images\Skins\skin_twitch_07.jpg" />
+    <Content Include="Images\Skins\skin_twitch_08.jpg" />
+    <Content Include="Images\Skins\skin_twitch_12.jpg" />
+    <Content Include="Images\Skins\skin_twitch_27.jpg" />
+    <Content Include="Images\Skins\skin_twitch_36.jpg" />
+    <Content Include="Images\Skins\skin_udyr_01.jpg" />
+    <Content Include="Images\Skins\skin_udyr_02.jpg" />
+    <Content Include="Images\Skins\skin_udyr_03.jpg" />
+    <Content Include="Images\Skins\skin_udyr_04.jpg" />
+    <Content Include="Images\Skins\skin_udyr_05.jpg" />
+    <Content Include="Images\Skins\skin_urgot_01.jpg" />
+    <Content Include="Images\Skins\skin_urgot_02.jpg" />
+    <Content Include="Images\Skins\skin_urgot_03.jpg" />
+    <Content Include="Images\Skins\skin_urgot_09.jpg" />
+    <Content Include="Images\Skins\skin_urgot_15.jpg" />
+    <Content Include="Images\Skins\skin_varus_01.jpg" />
+    <Content Include="Images\Skins\skin_varus_02.jpg" />
+    <Content Include="Images\Skins\skin_varus_03.jpg" />
+    <Content Include="Images\Skins\skin_varus_04.jpg" />
+    <Content Include="Images\Skins\skin_varus_05.jpg" />
+    <Content Include="Images\Skins\skin_varus_06.jpg" />
+    <Content Include="Images\Skins\skin_varus_07.jpg" />
+    <Content Include="Images\Skins\skin_varus_09.jpg" />
+    <Content Include="Images\Skins\skin_varus_16.jpg" />
+    <Content Include="Images\Skins\skin_varus_17.jpg" />
+    <Content Include="Images\Skins\skin_vayne_01.jpg" />
+    <Content Include="Images\Skins\skin_vayne_02.jpg" />
+    <Content Include="Images\Skins\skin_vayne_03.jpg" />
+    <Content Include="Images\Skins\skin_vayne_04.jpg" />
+    <Content Include="Images\Skins\skin_vayne_05.jpg" />
+    <Content Include="Images\Skins\skin_vayne_06.jpg" />
+    <Content Include="Images\Skins\skin_vayne_10.jpg" />
+    <Content Include="Images\Skins\skin_vayne_11.jpg" />
+    <Content Include="Images\Skins\skin_vayne_12.jpg" />
+    <Content Include="Images\Skins\skin_vayne_13.jpg" />
+    <Content Include="Images\Skins\skin_vayne_14.jpg" />
+    <Content Include="Images\Skins\skin_vayne_15.jpg" />
+    <Content Include="Images\Skins\skin_vayne_25.jpg" />
+    <Content Include="Images\Skins\skin_veigar_01.jpg" />
+    <Content Include="Images\Skins\skin_veigar_02.jpg" />
+    <Content Include="Images\Skins\skin_veigar_03.jpg" />
+    <Content Include="Images\Skins\skin_veigar_04.jpg" />
+    <Content Include="Images\Skins\skin_veigar_05.jpg" />
+    <Content Include="Images\Skins\skin_veigar_06.jpg" />
+    <Content Include="Images\Skins\skin_veigar_07.jpg" />
+    <Content Include="Images\Skins\skin_veigar_08.jpg" />
+    <Content Include="Images\Skins\skin_veigar_09.jpg" />
+    <Content Include="Images\Skins\skin_veigar_13.jpg" />
+    <Content Include="Images\Skins\skin_veigar_23.jpg" />
+    <Content Include="Images\Skins\skin_veigar_32.jpg" />
+    <Content Include="Images\Skins\skin_velkoz_01.jpg" />
+    <Content Include="Images\Skins\skin_velkoz_02.jpg" />
+    <Content Include="Images\Skins\skin_velkoz_03.jpg" />
+    <Content Include="Images\Skins\skin_velkoz_04.jpg" />
+    <Content Include="Images\Skins\skin_velkoz_11.jpg" />
+    <Content Include="Images\Skins\skin_vex_50.jpg" />
+    <Content Include="Images\Skins\skin_viego_01.jpg" />
+    <Content Include="Images\Skins\skin_viego_10.jpg" />
+    <Content Include="Images\Skins\skin_viktor_01.jpg" />
+    <Content Include="Images\Skins\skin_viktor_02.jpg" />
+    <Content Include="Images\Skins\skin_viktor_03.jpg" />
+    <Content Include="Images\Skins\skin_viktor_04.jpg" />
+    <Content Include="Images\Skins\skin_viktor_05.jpg" />
+    <Content Include="Images\Skins\skin_vi_01.jpg" />
+    <Content Include="Images\Skins\skin_vi_02.jpg" />
+    <Content Include="Images\Skins\skin_vi_03.jpg" />
+    <Content Include="Images\Skins\skin_vi_04.jpg" />
+    <Content Include="Images\Skins\skin_vi_05.jpg" />
+    <Content Include="Images\Skins\skin_vi_11.jpg" />
+    <Content Include="Images\Skins\skin_vi_12.jpg" />
+    <Content Include="Images\Skins\skin_vi_20.jpg" />
+    <Content Include="Images\Skins\skin_vi_50.jpg" />
+    <Content Include="Images\Skins\skin_vi_51.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_01.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_02.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_03.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_04.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_05.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_06.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_07.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_08.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_14.jpg" />
+    <Content Include="Images\Skins\skin_vladimir_21.jpg" />
+    <Content Include="Images\Skins\skin_volibear_01.jpg" />
+    <Content Include="Images\Skins\skin_volibear_02.jpg" />
+    <Content Include="Images\Skins\skin_volibear_03.jpg" />
+    <Content Include="Images\Skins\skin_volibear_04.jpg" />
+    <Content Include="Images\Skins\skin_volibear_05.jpg" />
+    <Content Include="Images\Skins\skin_volibear_06.jpg" />
+    <Content Include="Images\Skins\skin_volibear_07.jpg" />
+    <Content Include="Images\Skins\skin_warwick_01.jpg" />
+    <Content Include="Images\Skins\skin_warwick_02.jpg" />
+    <Content Include="Images\Skins\skin_warwick_03.jpg" />
+    <Content Include="Images\Skins\skin_warwick_04.jpg" />
+    <Content Include="Images\Skins\skin_warwick_05.jpg" />
+    <Content Include="Images\Skins\skin_warwick_06.jpg" />
+    <Content Include="Images\Skins\skin_warwick_07.jpg" />
+    <Content Include="Images\Skins\skin_warwick_08.jpg" />
+    <Content Include="Images\Skins\skin_warwick_09.jpg" />
+    <Content Include="Images\Skins\skin_warwick_10.jpg" />
+    <Content Include="Images\Skins\skin_warwick_16.jpg" />
+    <Content Include="Images\Skins\skin_warwick_35.jpg" />
+    <Content Include="Images\Skins\skin_xayah_01.jpg" />
+    <Content Include="Images\Skins\skin_xayah_02.jpg" />
+    <Content Include="Images\Skins\skin_xayah_03.jpg" />
+    <Content Include="Images\Skins\skin_xayah_04.jpg" />
+    <Content Include="Images\Skins\skin_xayah_08.jpg" />
+    <Content Include="Images\Skins\skin_xayah_17.jpg" />
+    <Content Include="Images\Skins\skin_xerath_01.jpg" />
+    <Content Include="Images\Skins\skin_xerath_02.jpg" />
+    <Content Include="Images\Skins\skin_xerath_03.jpg" />
+    <Content Include="Images\Skins\skin_xerath_04.jpg" />
+    <Content Include="Images\Skins\skin_xerath_05.jpg" />
+    <Content Include="Images\Skins\skin_xerath_12.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_01.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_02.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_03.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_04.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_05.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_06.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_13.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_20.jpg" />
+    <Content Include="Images\Skins\skin_xinzhao_27.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_01.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_02.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_03.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_09.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_10.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_17.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_18.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_35.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_36.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_40.jpg" />
+    <Content Include="Images\Skins\skin_yasuo_41.jpg" />
+    <Content Include="Images\Skins\skin_yone_01.jpg" />
+    <Content Include="Images\Skins\skin_yone_10.jpg" />
+    <Content Include="Images\Skins\skin_yone_50.jpg" />
+    <Content Include="Images\Skins\skin_yorick_01.jpg" />
+    <Content Include="Images\Skins\skin_yorick_02.jpg" />
+    <Content Include="Images\Skins\skin_yorick_03.jpg" />
+    <Content Include="Images\Skins\skin_yorick_04.jpg" />
+    <Content Include="Images\Skins\skin_yorick_12.jpg" />
+    <Content Include="Images\Skins\skin_yorick_21.jpg" />
+    <Content Include="Images\Skins\skin_yuumi_01.jpg" />
+    <Content Include="Images\Skins\skin_yuumi_11.jpg" />
+    <Content Include="Images\Skins\skin_yuumi_19.jpg" />
+    <Content Include="Images\Skins\skin_yuumi_30.jpg" />
+    <Content Include="Images\Skins\skin_zac_01.jpg" />
+    <Content Include="Images\Skins\skin_zac_02.jpg" />
+    <Content Include="Images\Skins\skin_zac_06.jpg" />
+    <Content Include="Images\Skins\skin_zac_07.jpg" />
+    <Content Include="Images\Skins\skin_zed_01.jpg" />
+    <Content Include="Images\Skins\skin_zed_02.jpg" />
+    <Content Include="Images\Skins\skin_zed_03.jpg" />
+    <Content Include="Images\Skins\skin_zed_10.jpg" />
+    <Content Include="Images\Skins\skin_zed_11.jpg" />
+    <Content Include="Images\Skins\skin_zed_13.jpg" />
+    <Content Include="Images\Skins\skin_zed_15.jpg" />
+    <Content Include="Images\Skins\skin_zed_30.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_01.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_02.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_03.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_04.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_05.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_06.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_07.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_14.jpg" />
+    <Content Include="Images\Skins\skin_ziggs_23.jpg" />
+    <Content Include="Images\Skins\skin_zilean_01.jpg" />
+    <Content Include="Images\Skins\skin_zilean_02.jpg" />
+    <Content Include="Images\Skins\skin_zilean_03.jpg" />
+    <Content Include="Images\Skins\skin_zilean_04.jpg" />
+    <Content Include="Images\Skins\skin_zilean_05.jpg" />
+    <Content Include="Images\Skins\skin_zilean_06.jpg" />
+    <Content Include="Images\Skins\skin_zoe_01.jpg" />
+    <Content Include="Images\Skins\skin_zoe_02.jpg" />
+    <Content Include="Images\Skins\skin_zoe_09.jpg" />
+    <Content Include="Images\Skins\skin_zoe_18.jpg" />
+    <Content Include="Images\Skins\skin_zoe_19.jpg" />
+    <Content Include="Images\Skins\skin_zyra_01.jpg" />
+    <Content Include="Images\Skins\skin_zyra_02.jpg" />
+    <Content Include="Images\Skins\skin_zyra_03.jpg" />
+    <Content Include="Images\Skins\skin_zyra_04.jpg" />
+    <Content Include="Images\Skins\skin_zyra_05.jpg" />
+    <Content Include="Images\Skins\skin_zyra_06.jpg" />
+    <Content Include="Images\Skins\skin_zyra_07.jpg" />
+    <Content Include="Images\Skins\skin_zyra_16.jpg" />
+    <Content Include="Images\skin_chroma.png" />
+    <Content Include="Images\skin_epic.png" />
+    <Content Include="Images\skin_legend.png" />
+    <Content Include="Images\skin_limit.png" />
+    <Content Include="Images\skin_myth.png" />
+    <Content Include="Images\skin_transcend.png" />
+    <Content Include="Images\spell_barrier.png" />
+    <Content Include="Images\spell_clarity.png" />
+    <Content Include="Images\spell_cleanse.png" />
+    <Content Include="Images\spell_exhaust.png" />
+    <Content Include="Images\spell_flash.png" />
+    <Content Include="Images\spell_ghost.png" />
+    <Content Include="Images\spell_heal.png" />
+    <Content Include="Images\spell_ignite.png" />
+    <Content Include="Images\spell_mark.png" />
+    <Content Include="Images\spell_smite.png" />
+    <Content Include="Images\spell_teleport.png" />
+    <Content Include="Images\Stores\champ_akshan.png" />
+    <Content Include="Images\Stores\champ_amumu.png" />
+    <Content Include="Images\Stores\champ_anivia.png" />
+    <Content Include="Images\Stores\champ_annie.png" />
+    <Content Include="Images\Stores\champ_aphelios.png" />
+    <Content Include="Images\Stores\champ_ari.png" />
+    <Content Include="Images\Stores\champ_ashe.png" />
+    <Content Include="Images\Stores\champ_aurelionsol.png" />
+    <Content Include="Images\Stores\champ_azir.png" />
+    <Content Include="Images\Stores\champ_bard.png" />
+    <Content Include="Images\Stores\champ_blitzcrank.png" />
+    <Content Include="Images\Stores\champ_brand.png" />
+    <Content Include="Images\Stores\champ_chogath.png" />
+    <Content Include="Images\Stores\champ_corki.png" />
+    <Content Include="Images\Stores\champ_drmundo.png" />
+    <Content Include="Images\Stores\champ_evelynn.png" />
+    <Content Include="Images\Stores\champ_ezreal.png" />
+    <Content Include="Images\Stores\champ_fiddlesticks.png" />
+    <Content Include="Images\Stores\champ_fiora.png" />
+    <Content Include="Images\Stores\champ_galio.png" />
+    <Content Include="Images\Stores\champ_gangplank.png" />
+    <Content Include="Images\Stores\champ_garen.png" />
+    <Content Include="Images\Stores\champ_gnar.png" />
+    <Content Include="Images\Stores\champ_gwen.png" />
+    <Content Include="Images\Stores\champ_heimerdinger.png" />
+    <Content Include="Images\Stores\champ_irelia.png" />
+    <Content Include="Images\Stores\champ_jarvaniv.png" />
+    <Content Include="Images\Stores\champ_jhin.png" />
+    <Content Include="Images\Stores\champ_Jinx.png" />
+    <Content Include="Images\Stores\champ_kaisa.png" />
+    <Content Include="Images\Stores\champ_karma.png" />
+    <Content Include="Images\Stores\champ_kassadin.png" />
+    <Content Include="Images\Stores\champ_katarina.png" />
+    <Content Include="Images\Stores\champ_kayle.png" />
+    <Content Include="Images\Stores\champ_leblanc.png" />
+    <Content Include="Images\Stores\champ_leona.png" />
+    <Content Include="Images\Stores\champ_lillia.png" />
+    <Content Include="Images\Stores\champ_lucian.png" />
+    <Content Include="Images\Stores\champ_lulu.png" />
+    <Content Include="Images\Stores\champ_lux.png" />
+    <Content Include="Images\Stores\champ_malphite.png" />
+    <Content Include="Images\Stores\champ_malzahar.png" />
+    <Content Include="Images\Stores\champ_maokai.png" />
+    <Content Include="Images\Stores\champ_masteryi.png" />
+    <Content Include="Images\Stores\champ_missfortune.png" />
+    <Content Include="Images\Stores\champ_nami.png" />
+    <Content Include="Images\Stores\champ_nasus.png" />
+    <Content Include="Images\Stores\champ_neeko.png" />
+    <Content Include="Images\Stores\champ_nidalee.png" />
+    <Content Include="Images\Stores\champ_nunu.png" />
+    <Content Include="Images\Stores\champ_olaf.png" />
+    <Content Include="Images\Stores\champ_poppy.png" />
+    <Content Include="Images\Stores\champ_pyke.png" />
+    <Content Include="Images\Stores\champ_quinn.png" />
+    <Content Include="Images\Stores\champ_rammus.png" />
+    <Content Include="Images\Stores\champ_rell.png" />
+    <Content Include="Images\Stores\champ_renekton.png" />
+    <Content Include="Images\Stores\champ_rengar.png" />
+    <Content Include="Images\Stores\champ_rumble.png" />
+    <Content Include="Images\Stores\champ_ryze.png" />
+    <Content Include="Images\Stores\champ_samira.png" />
+    <Content Include="Images\Stores\champ_sejuani.png" />
+    <Content Include="Images\Stores\champ_senna.png" />
+    <Content Include="Images\Stores\champ_seraphine.png" />
+    <Content Include="Images\Stores\champ_shyvana.png" />
+    <Content Include="Images\Stores\champ_sion.png" />
+    <Content Include="Images\Stores\champ_sivir.png" />
+    <Content Include="Images\Stores\champ_skarner.png" />
+    <Content Include="Images\Stores\champ_soraka.png" />
+    <Content Include="Images\Stores\champ_syndra.png" />
+    <Content Include="Images\Stores\champ_talon.png" />
+    <Content Include="Images\Stores\champ_taric.png" />
+    <Content Include="Images\Stores\champ_teemo.png" />
+    <Content Include="Images\Stores\champ_thresh.png" />
+    <Content Include="Images\Stores\champ_tryndamere.png" />
+    <Content Include="Images\Stores\champ_twistedfate.png" />
+    <Content Include="Images\Stores\champ_twitch.png" />
+    <Content Include="Images\Stores\champ_varus.png" />
+    <Content Include="Images\Stores\champ_vayne.png" />
+    <Content Include="Images\Stores\champ_veigar.png" />
+    <Content Include="Images\Stores\champ_velkoz.png" />
+    <Content Include="Images\Stores\champ_vi.png" />
+    <Content Include="Images\Stores\champ_viego.png" />
+    <Content Include="Images\Stores\champ_vladimir.png" />
+    <Content Include="Images\Stores\champ_volibear.png" />
+    <Content Include="Images\Stores\champ_wukong.png" />
+    <Content Include="Images\Stores\champ_xerath.png" />
+    <Content Include="Images\Stores\champ_xinzhao.png" />
+    <Content Include="Images\Stores\champ_yasuo.png" />
+    <Content Include="Images\Stores\champ_yone.png" />
+    <Content Include="Images\Stores\champ_yuumi.png" />
+    <Content Include="Images\Stores\champ_zed.png" />
+    <Content Include="Images\Stores\champ_ziggs.png" />
+    <Content Include="Images\Stores\champ_zilean.png" />
+    <Content Include="Images\Stores\champ_zoe.png" />
+    <Content Include="Images\Stores\champ_zyra.png" />
+    <Content Include="Images\TeamFights\lol-curtaincall.png" />
+    <Content Include="Images\TeamFights\lol-curtaincall2.png" />
+    <Content Include="Images\TeamFights\lol-emoji-beg.jpg" />
+    <Content Include="Images\TeamFights\lol-emoji-random.png" />
+    <Content Include="Images\TeamFights\lol-goblin.jpg" />
+    <Content Include="Images\TeamFights\lol-kanmei.png" />
+    <Content Include="Images\TeamFights\lol-legend-egg.png" />
+    <Content Include="Images\TeamFights\lol-luckypig.png" />
+    <Content Include="Images\TeamFights\lol-small-egg.png" />
+    <Content Include="Images\TeamFights\lol-star-item.jpg" />
+    <Content Include="Images\thumb-1.png" />
+    <Content Include="Images\thumb-10.png" />
+    <Content Include="Images\thumb-11.png" />
+    <Content Include="Images\thumb-12.png" />
+    <Content Include="Images\thumb-2.png" />
+    <Content Include="Images\thumb-3.png" />
+    <Content Include="Images\thumb-4.png" />
+    <Content Include="Images\thumb-5.png" />
+    <Content Include="Images\thumb-6.png" />
+    <Content Include="Images\thumb-7.png" />
+    <Content Include="Images\thumb-8.png" />
+    <Content Include="Images\thumb-9.png" />
+    <Content Include="Images\Thumbnails\0.png" />
+    <Content Include="Images\Thumbnails\1.png" />
+    <Content Include="Images\Thumbnails\10.png" />
+    <Content Include="Images\Thumbnails\11.png" />
+    <Content Include="Images\Thumbnails\13.png" />
+    <Content Include="Images\Thumbnails\14.png" />
+    <Content Include="Images\Thumbnails\15.png" />
+    <Content Include="Images\Thumbnails\16.png" />
+    <Content Include="Images\Thumbnails\17.png" />
+    <Content Include="Images\Thumbnails\18.png" />
+    <Content Include="Images\Thumbnails\21.png" />
+    <Content Include="Images\Thumbnails\22.png" />
+    <Content Include="Images\Thumbnails\23.png" />
+    <Content Include="Images\Thumbnails\24.png" />
+    <Content Include="Images\Thumbnails\25.png" />
+    <Content Include="Images\Thumbnails\27.png" />
+    <Content Include="Images\Thumbnails\32.png" />
+    <Content Include="Images\Thumbnails\33.png" />
+    <Content Include="Images\Thumbnails\35.png" />
+    <Content Include="Images\Thumbnails\37.png" />
+    <Content Include="Images\Thumbnails\39.png" />
+    <Content Include="Images\Thumbnails\4.png" />
+    <Content Include="Images\Thumbnails\42.png" />
+    <Content Include="Images\Thumbnails\5.png" />
+    <Content Include="Images\Thumbnails\6.png" />
+    <Content Include="Images\Thumbnails\7.png" />
+    <Content Include="Images\Thumbnails\8.png" />
+    <Content Include="Images\Thumbnails\9.png" />
+    <Content Include="Images\Thumbnails\Barus.png" />
+    <Content Include="Images\Thumbnails\gangplank.png" />
+    <Content Include="Images\Thumbnails\Gragas.png" />
+    <Content Include="Images\Thumbnails\LeBlanc.png" />
+    <Content Include="Images\Thumbnails\Leesin.png" />
+    <Content Include="Images\Thumbnails\Lissandra.png" />
+    <Content Include="Images\Thumbnails\Lux.png" />
+    <Content Include="Images\Thumbnails\malphite.png" />
+    <Content Include="Images\Thumbnails\Maokai.png" />
+    <Content Include="Images\Thumbnails\Morgana.png" />
+    <Content Include="Images\Thumbnails\Neeko.png" />
+    <Content Include="Images\Thumbnails\Oriana.png" />
+    <Content Include="Images\Thumbnails\riven.png" />
+    <Content Include="Images\Thumbnails\Rucian.png" />
+    <Content Include="Images\Thumbnails\rumble.png" />
+    <Content Include="Images\wallpaper-caitlyn.jpg" />
+    <Content Include="Images\wallpaper-ezreal.jpg" />
+    <Content Include="Images\wallpaper-fiora-gaussian.jpg" />
+    <Content Include="Images\wallpaper-fiora.jpg" />
+    <Content Include="Images\wallpaper-gnar.jpg" />
+    <Content Include="Images\wallpaper-jinx.jpg" />
+    <Content Include="Images\wallpaper-kindred.jpg" />
+    <Content Include="Images\wallpaper-leesin.png" />
+    <Content Include="Images\wallpaper-leona.jpg" />
+    <Content Include="Images\wallpaper-lux-gaussian.jpg" />
+    <Content Include="Images\wallpaper-lux.jpg" />
+    <Content Include="Images\wallpaper-maokai.jpg" />
+    <Content Include="Images\wallpaper-rucian.png" />
+    <Content Include="Images\wallpaper-sena.png" />
+    <Content Include="Images\wallpaper-singed.png" />
+    <Content Include="Images\wallpaper-tft.jpg" />
+    <Content Include="Images\wallpaper-thumb-1.png" />
+    <Content Include="Images\wallpaper-thumb-2.png" />
+    <Content Include="Images\worlds_2022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Datas\Friends.yml" />
+    <EmbeddedResource Include="Datas\MatchHistories.yml" />
+    <EmbeddedResource Include="Datas\Menus.yml" />
+    <EmbeddedResource Include="Datas\Options.yml" />
+    <EmbeddedResource Include="Datas\PersonalChampStats.yml" />
+    <EmbeddedResource Include="Datas\PlayChamps.yml" />
+    <EmbeddedResource Include="Datas\Recents.yml" />
+    <EmbeddedResource Include="Datas\Schedules.yml" />
+    <EmbeddedResource Include="Datas\Skins.yml" />
+    <EmbeddedResource Include="Datas\Spells.yml" />
+    <EmbeddedResource Include="Datas\StoreChamps.yml" />
+    <EmbeddedResource Include="Datas\TeamFights.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Jamesnet.Uwp\Jamesnet.Uwp.csproj">
+      <Project>{080a74d4-acce-47c3-a09f-2d5a3539de2d}</Project>
+      <Name>Jamesnet.Uwp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj">
+      <Project>{83c372fd-2447-4d82-a96d-682b212205f1}</Project>
+      <Name>Jamesnet.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
